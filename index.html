@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Wealth - Investment & Wealth Management</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="common.css">
+</head>
+
+<body>
+
+
+    <div class="preloader-overlay" id="preloader">
+        <div class="preloader-content">
+            <div class="aqua-ring"></div>
+            <div class="preloader-icon">
+                <i class="fa-solid fa-chart-line"></i>
+            </div>
+            <div class="preloader-text">TECH WEALTH</div>
+            <div class="preloader-subtext">Optimizing Assets...</div>
+        </div>
+    </div>
+
+
+    <div class="app-hidden" id="mainContent">
+        <header class="navbar" id="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="./asset/Logo blue.webp" alt="logo"></a>
+            </div>
+
+
+            <div class="nav-menu-wrapper" id="menuWrapper">
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-item active"><i class="fa-solid fa-house"></i> Home</a></li>
+                    <li><a href="#services" class="nav-item"><i class="fa-solid fa-briefcase"></i> Services</a></li>
+                    <li><a href="#about" class="nav-item"><i class="fa-solid fa-circle-info"></i> About Us</a></li>
+                    <li><a href="#blog" class="nav-item"><i class="fa-solid fa-newspaper"></i> Blog</a></li>
+                    <li><a href="#contact" class="nav-item"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+                </ul>
+
+                <div class="auth-buttons">
+                    <button class="login-btn btn-hover" onclick="window.location.href='login.html'">Client
+                        Login</button>
+                    <button class="signin-btn btn-hover" onclick="window.location.href='register.html'">Get
+                        Started</button>
+                </div>
+            </div>
+
+
+            <div class="nav-right-controls">
+                <div class="burger" id="burgerMenu">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </div>
+        </header>
+
+    </div>
+
+
+    <section class="hero-section" id="home">
+
+        <video autoplay loop muted playsinline class="hero-video">
+
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        </video>
+
+
+        <div class="hero-overlay"></div>
+        <div class="grid-pattern"></div>
+        <div class="glow-circle circle-1"></div>
+        <div class="glow-circle circle-2"></div>
+
+
+        <div class="hero-container">
+
+
+            <div class="hero-content-left">
+                <div class="badge-text"><i class="fa-solid fa-bolt"></i> Future of Finance</div>
+                <h1 class="hero-title">Next-Gen <br><span class="highlight">Wealth Management</span></h1>
+                <p class="hero-desc">
+                    Take control of your financial destiny with our data-driven investment strategies. We combine
+                    cutting-edge AI technology with expert financial analysis to build, protect, and scale your wealth
+                    in a rapidly evolving digital economy. Experience personalized portfolio management designed for
+                    your long-term success.
+                </p>
+
+                <div class="hero-ctas">
+                    <button class="signin-btn btn-hover">Start Investing <i
+                            class="fa-solid fa-arrow-right"></i></button>
+                    <button class="login-btn btn-hover"><i class="fa-regular fa-circle-play"></i> Watch Demo</button>
+                </div>
+
+                <div class="trust-badges">
+                    <span><i class="fa-solid fa-shield-halved"></i> Bank-Grade Security</span>
+                    <span><i class="fa-solid fa-award"></i> Award Winning</span>
+                    <span><i class="fa-solid fa-users"></i> 50K+ Clients</span>
+                </div>
+            </div>
+
+
+
+            <div class="hero-content-right">
+                <div class="glass-dashboard">
+                    <div class="dash-header">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+
+
+                    <div class="dash-body">
+
+                        <img src="./asset/a5.webp" alt="Dashboard View" class="dash-image">
+                    </div>
+
+
+                    <div class="float-card card-1">
+                        <div class="card-icon"><i class="fa-solid fa-arrow-trend-up"></i></div>
+                        <div class="card-info">
+                            <h4>+24.5%</h4>
+                            <p>Portfolio Growth</p>
+                        </div>
+                    </div>
+
+                    <div class="float-card card-2">
+                        <div class="card-icon"><i class="fa-solid fa-sack-dollar"></i></div>
+                        <div class="card-info">
+                            <h4>$5.2B</h4>
+                            <p>Assets Managed</p>
+                        </div>
+                    </div>
+
+                    <div class="float-card card-3">
+                        <div class="card-icon star"><i class="fa-solid fa-star"></i></div>
+                        <div class="card-info">
+                            <h4>4.9/5</h4>
+                            <p>Client Satisfaction</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+    </section>
+
+
+    <section class="market-ticker-section">
+        <div class="ticker-glass-container">
+            <div class="ticker-track">
+
+                <div class="ticker-item"><span>📈</span> S&P 500 <span class="highlight-up">+1.24%</span></div>
+                <div class="ticker-item"><span>🥇</span> Gold <span class="highlight-neutral">₹9,850/g</span></div>
+                <div class="ticker-item"><span>📊</span> NASDAQ <span class="highlight-up">+2.14%</span></div>
+                <div class="ticker-item"><span>₿</span> Bitcoin <span class="highlight-up">+3.12%</span></div>
+                <div class="ticker-item"><span>💵</span> USD/INR <span class="highlight-neutral">85.24</span></div>
+                <div class="ticker-item"><span>📈</span> NIFTY <span class="highlight-up">+0.85%</span></div>
+
+
+                <div class="ticker-item"><span>📈</span> S&P 500 <span class="highlight-up">+1.24%</span></div>
+                <div class="ticker-item"><span>🥇</span> Gold <span class="highlight-neutral">₹9,850/g</span></div>
+                <div class="ticker-item"><span>📊</span> NASDAQ <span class="highlight-up">+2.14%</span></div>
+                <div class="ticker-item"><span>₿</span> Bitcoin <span class="highlight-up">+3.12%</span></div>
+                <div class="ticker-item"><span>💵</span> USD/INR <span class="highlight-neutral">85.24</span></div>
+                <div class="ticker-item"><span>📈</span> NIFTY <span class="highlight-up">+0.85%</span></div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="wealth-solutions-section">
+        <div class="section-header">
+            <h2>Premium Wealth <span>Solutions</span></h2>
+            <p>Tailored financial strategies designed to protect, grow, and transfer your wealth across generations.</p>
+        </div>
+
+        <div class="honeycomb-grid">
+
+            <div class="glass-card fade-up">
+                <div class="card-inner">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&q=80&w=600"
+                            alt="Portfolio Management">
+                    </div>
+                    <div class="card-content">
+                        <div class="gradient-icon">📊</div>
+                        <h3>Portfolio Management</h3>
+                        <p>We build highly customized investment portfolios based on rigorous market analysis. Our
+                            experts actively manage your assets to maximize returns while strictly controlling risk,
+                            ensuring your wealth grows consistently in any market condition.</p>
+                        <a href="#" class="aqua-btn">Explore Strategy <span>→</span></a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="glass-card fade-up delay-1">
+                <div class="card-inner">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1556740714-a8395b3bf30f?auto=format&fit=crop&q=80&w=600"
+                            alt="Retirement Planning">
+                    </div>
+                    <div class="card-content">
+                        <div class="gradient-icon">🏖️</div>
+                        <h3>Retirement Planning</h3>
+                        <p>Secure your future with our comprehensive retirement blueprints. We analyze inflation rates,
+                            healthcare costs, and lifestyle goals to create a robust cash-flow engine that pays you
+                            consistently after you step away from your business.</p>
+                        <a href="#" class="aqua-btn">Plan Your Future <span>→</span></a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="glass-card fade-up delay-2">
+                <div class="card-inner">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&q=80&w=600"
+                            alt="Estate & Trust">
+                    </div>
+                    <div class="card-content">
+                        <div class="gradient-icon">🏛️</div>
+                        <h3>Estate & Trust Services</h3>
+                        <p>Preserve your legacy for the next generation. Our legal and financial advisors work together
+                            to structure tax-efficient trusts, seamless inheritance plans, and philanthropic foundations
+                            that align with your family's core values.</p>
+                        <a href="#" class="aqua-btn">Secure Legacy <span>→</span></a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="glass-card fade-up">
+                <div class="card-inner">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9?auto=format&fit=crop&q=80&w=600"
+                            alt="Tax Optimization">
+                    </div>
+                    <div class="card-content">
+                        <div class="gradient-icon">📉</div>
+                        <h3>Tax Optimization</h3>
+                        <p>Keep more of what you earn. We utilize advanced tax-loss harvesting, strategic asset
+                            location, and corporate restructuring to minimize your tax liabilities legally, boosting
+                            your net compound growth significantly over time.</p>
+                        <a href="#" class="aqua-btn">Optimize Taxes <span>→</span></a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="glass-card fade-up delay-1">
+                <div class="card-inner">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1633158829585-23ba8f7c8caf?auto=format&fit=crop&q=80&w=600"
+                            alt="Crypto & Alternative">
+                    </div>
+                    <div class="card-content">
+                        <div class="gradient-icon">₿</div>
+                        <h3>Alternative Assets</h3>
+                        <p>Diversify beyond traditional stocks and bonds. Gain exclusive access to private equity, real
+                            estate syndications, hedge funds, and institutional-grade cryptocurrency custody to give
+                            your portfolio an uncorrelated alpha advantage.</p>
+                        <a href="#" class="aqua-btn">View Alternatives <span>→</span></a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="glass-card fade-up delay-2">
+                <div class="card-inner">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=600"
+                            alt="Corporate Advisory">
+                    </div>
+                    <div class="card-content">
+                        <div class="gradient-icon">🏢</div>
+                        <h3>Corporate Advisory</h3>
+                        <p>Tailored solutions for business owners and executives. From managing concentrated stock
+                            positions and executive compensation plans to facilitating M&A transactions and succession
+                            planning, we guide your corporate journey.</p>
+                        <a href="#" class="aqua-btn">Business Solutions <span>→</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="wealth-journey-section">
+        <div class="section-header reveal">
+            <h2>Your Wealth <span>Journey</span></h2>
+            <p>A structured, strategic curved path to financial independence and legacy.</p>
+        </div>
+
+        <div class="journey-roadmap">
+
+            <div class="center-line"></div>
+
+
+            <div class="journey-step left reveal">
+                <div class="step-dot">1</div>
+                <div class="glass-card journey-card">
+                    <h3>Discover</h3>
+                    <p>We begin by deeply understanding your financial situation, lifestyle goals, and risk tolerance.
+                        This comprehensive discovery phase ensures our strategies perfectly align with your unique
+                        personal and business objectives for the future.</p>
+                    <a href="#" class="aqua-btn-outline">Learn More <span>→</span></a>
+                </div>
+            </div>
+
+
+            <div class="journey-step right reveal">
+                <div class="step-dot">2</div>
+                <div class="glass-card journey-card">
+                    <h3>Plan</h3>
+                    <p>Our experts craft a bespoke financial blueprint encompassing asset allocation, tax optimization,
+                        and estate planning. This dynamic roadmap serves as your strategic guide, adapting automatically
+                        as your life circumstances evolve.</p>
+                    <a href="#" class="aqua-btn-outline">View Planning <span>→</span></a>
+                </div>
+            </div>
+
+
+            <div class="journey-step left reveal">
+                <div class="step-dot">3</div>
+                <div class="glass-card journey-card">
+                    <h3>Invest</h3>
+                    <p>We deploy your capital into carefully vetted, diversified portfolios including equities, fixed
+                        income, and alternative assets. Our institutional-grade investment approach minimizes downside
+                        risk while capturing optimal market returns.</p>
+                    <a href="#" class="aqua-btn-outline">Investment Approach <span>→</span></a>
+                </div>
+            </div>
+
+
+            <div class="journey-step right reveal">
+                <div class="step-dot">4</div>
+                <div class="glass-card journey-card">
+                    <h3>Grow</h3>
+                    <p>Through active portfolio management, tax-loss harvesting, and strategic rebalancing, we
+                        continually compound your wealth. Regular performance reviews keep you completely informed and
+                        confident that your net worth is steadily increasing.</p>
+                    <a href="#" class="aqua-btn-outline">Growth Strategies <span>→</span></a>
+                </div>
+            </div>
+
+
+            <div class="journey-step left reveal">
+                <div class="step-dot">5</div>
+                <div class="glass-card journey-card">
+                    <h3>Retire</h3>
+                    <p>Transition seamlessly into your next chapter with a sustainable, tax-efficient income strategy.
+                        We ensure your accumulated wealth supports your desired lifestyle indefinitely, while smoothly
+                        transferring your remaining legacy to the next generation.</p>
+                    <a href="index.html" class="aqua-btn-outline">Retirement Goals <span>→</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="performance-dashboard-section">
+        <div class="section-header reveal">
+            <h2>Performance <span>Dashboard</span></h2>
+            <p>Experience institutional-grade analytics. Track your portfolio's growth, asset allocation, and risk
+                metrics in real-time through our advanced, transparent trading interface.</p>
+        </div>
+
+        <div class="dashboard-glass-panel reveal">
+
+
+            <div class="dashboard-row profit-cards-row">
+                <div class="glass-card profit-card">
+                    <p class="card-label">Total Portfolio Value</p>
+                    <h3 class="card-value">$2,450,890.50</h3>
+                    <p class="card-subtext positive"><i class="fa-solid fa-arrow-trend-up"></i> +$345,120 (All Time)</p>
+                </div>
+                <div class="glass-card profit-card">
+                    <p class="card-label">Monthly Profit</p>
+                    <h3 class="card-value neon-green">+$24,850.00</h3>
+                    <p class="card-subtext">Optimized via algorithmic trading</p>
+                </div>
+                <div class="glass-card profit-card">
+                    <p class="card-label">YTD Return</p>
+                    <h3 class="card-value neon-aqua">+14.2%</h3>
+                    <p class="card-subtext">Outperforming S&P 500 benchmark</p>
+                </div>
+            </div>
+
+
+            <div class="dashboard-row charts-row">
+
+                <div class="glass-card chart-main">
+                    <div class="card-header">
+                        <h4>Portfolio Growth Trajectory</h4>
+                        <span class="live-badge"><i class="fa-solid fa-circle live-dot"></i> Live</span>
+                    </div>
+                    <div class="chart-image-container">
+                        <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&q=80&w=800"
+                            alt="Portfolio Growth Chart">
+                    </div>
+                    <p class="detailed-text">
+                        Our dynamic growth engine utilizes quantitative analysis to capture market upside. Over the past
+                        12 months, strategic entries in tech equities and alternative assets have driven a consistent
+                        upward trajectory, effectively doubling the benchmark returns while maintaining strict drawdown
+                        limits.
+                    </p>
+                </div>
+
+
+                <div class="glass-card chart-side">
+                    <div class="card-header">
+                        <h4>Asset Allocation</h4>
+                    </div>
+                    <div class="donut-image-container">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=400"
+                            alt="Asset Allocation">
+                    </div>
+                    <ul class="allocation-list">
+                        <li><span class="color-box eq"></span> Equities <strong>45%</strong></li>
+                        <li><span class="color-box fi"></span> Fixed Income <strong>30%</strong></li>
+                        <li><span class="color-box re"></span> Real Estate <strong>15%</strong></li>
+                        <li><span class="color-box cr"></span> Crypto & Alts <strong>10%</strong></li>
+                    </ul>
+                    <p class="detailed-text small">
+                        A highly diversified structure designed to weather market volatility. Rebalanced quarterly based
+                        on macroeconomic indicators.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="dashboard-cta">
+                <a href="#" class="aqua-btn pulse-btn">Launch Full Analytics Interface <span><i
+                            class="fa-solid fa-arrow-right"></i></span></a>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <section class="wealth-calculator-section">
+        <div class="calculator-container reveal">
+
+
+            <div class="calc-left-panel">
+                <div class="calc-header">
+                    <h2>Project Your <span>Wealth</span></h2>
+                    <p>The power of compounding is the eighth wonder of the world. Use our interactive projection tool
+                        to visualize how your wealth can grow over time through our disciplined, algorithmic investment
+                        strategies.</p>
+                </div>
+
+
+                <div class="calc-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1579532537598-459ecdaf39cc?auto=format&fit=crop&q=80&w=800"
+                        alt="Wealth Growth Curve">
+                </div>
+
+                <p class="calc-description">Adjust the parameters below to see potential future values. Our
+                    institutional-grade portfolios target consistent alpha, protecting you against inflation while
+                    capturing maximum market upside.</p>
+
+
+                <div class="sliders-container">
+
+                    <div class="slider-group">
+                        <div class="slider-labels">
+                            <label>Initial Investment</label>
+                            <span id="amount-display">₹5,00,000</span>
+                        </div>
+                        <input type="range" id="invest-amount" min="100000" max="5000000" step="50000" value="500000"
+                            class="aqua-slider">
+                    </div>
+
+
+                    <div class="slider-group">
+                        <div class="slider-labels">
+                            <label>Investment Period</label>
+                            <span id="years-display">10 Years</span>
+                        </div>
+                        <input type="range" id="invest-years" min="1" max="30" step="1" value="10" class="aqua-slider">
+                    </div>
+
+
+                    <div class="slider-group">
+                        <div class="slider-labels">
+                            <label>Expected Return (p.a)</label>
+                            <span id="return-display">12%</span>
+                        </div>
+                        <input type="range" id="invest-return" min="5" max="25" step="1" value="12" class="aqua-slider">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="calc-right-panel">
+                <div class="glass-card result-card">
+                    <div class="result-header">
+                        <i class="fa-solid fa-chart-pie"></i>
+                        <h3>Wealth Projection</h3>
+                    </div>
+
+                    <div class="result-data-box">
+                        <p>Total Investment</p>
+                        <h4 id="total-invested-result">₹5,00,000</h4>
+                    </div>
+
+
+                    <div class="result-data-box highlight-box pulse-glow">
+                        <p>Estimated Future Value</p>
+                        <h2 id="estimated-return-result" class="neon-aqua">₹15,52,924</h2>
+                        <div class="profit-badge">
+                            <i class="fa-solid fa-arrow-trend-up"></i> Total Profit: <span
+                                id="profit-result">₹10,52,924</span>
+                        </div>
+                    </div>
+
+                    <p class="disclaimer-text">
+                        *This preview uses a standard compound interest formula. Actual market returns may vary based on
+                        economic conditions and asset allocation.
+                    </p>
+
+                    <a href="#" class="solid-hover-btn full-width-btn">Start Your Journey Today</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <section class="success-stories-section">
+
+        <div class="stories-bg-overlay"></div>
+
+        <div class="section-header reveal">
+            <h2>Success <span>Stories</span></h2>
+            <p>Discover how our algorithmic strategies and expert advisory have transformed the financial futures of our
+                elite clients.</p>
+        </div>
+
+        <div class="carousel-container reveal">
+
+
+
+
+            <div class="story-card side-card">
+                <div class="client-image">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=250"
+                        alt="Client 1">
+                </div>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="quote">"Their risk management is unparalleled. During the market dip, my portfolio remained
+                    remarkably stable, and the recovery was faster than I ever expected."</p>
+                <div class="client-info">
+                    <h4>Rajesh Kumar</h4>
+                    <span>Tech Entrepreneur</span>
+                </div>
+            </div>
+
+
+            <div class="story-card center-card">
+                <div class="client-image">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=250"
+                        alt="Client 2">
+                </div>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="quote">"Transitioning my family's wealth to their platform was the best decision. The
+                    transparency, the AI-driven insights, and the personalized tax optimization have significantly
+                    boosted our net compound growth."</p>
+                <div class="client-info">
+                    <h4>Priya Sharma</h4>
+                    <span>CEO, Global Retail</span>
+                </div>
+            </div>
+
+
+            <div class="story-card side-card">
+                <div class="client-image">
+                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=250"
+                        alt="Client 3">
+                </div>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <p class="quote">"I was skeptical about alternative assets, but their global real estate syndications
+                    and crypto custody solutions provided the exact diversification my portfolio needed."</p>
+                <div class="client-info">
+                    <h4>Vikram Desai</h4>
+                    <span>Real Estate Investor</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <section class="experts-section">
+        <div class="section-header reveal">
+            <h2>Meet Our <span>Experts</span></h2>
+            <p>Behind every successful strategy is a team of industry veterans dedicated to your financial legacy and
+                wealth growth.</p>
+        </div>
+
+        <div class="experts-grid">
+
+            <div class="expert-card reveal">
+                <div class="card-inner">
+                    <div class="expert-image"><img
+                            src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=400"
+                            alt="Expert 1"></div>
+                    <h3>Dr. Rajesh Khanna</h3>
+                    <p class="role">Chief Investment Officer</p>
+                    <p class="expert-bio">With over 20 years of institutional experience, Rajesh specializes in
+                        quantitative macro strategies and global equity markets. He leads our algorithmic research team
+                        to ensure maximum capital growth.</p>
+                    <p class="expert-bio">He has successfully managed billion-dollar portfolios across three continents
+                        and holds a PhD in Financial Economics from Ivy League institutions.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="expert-card reveal">
+                <div class="card-inner">
+                    <div class="expert-image"><img
+                            src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400"
+                            alt="Expert 2"></div>
+                    <h3>Priya Sharma</h3>
+                    <p class="role">Senior Wealth Strategist</p>
+                    <p class="expert-bio">Priya is a master of tax optimization and multi-generational estate planning.
+                        She works closely with high-net-worth families to structure tax-efficient trusts that secure
+                        their long-term legacy.</p>
+                    <p class="expert-bio">Having served as a Lead Advisor for top-tier firms, she brings a holistic
+                        approach that balances aggressive wealth accumulation with prudent capital preservation
+                        techniques.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="expert-card reveal">
+                <div class="card-inner">
+                    <div class="expert-image"><img
+                            src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=400"
+                            alt="Expert 3"></div>
+                    <h3>Vikram Desai</h3>
+                    <p class="role">Risk Management Head</p>
+                    <p class="expert-bio">Vikram oversees our risk management protocols, ensuring that your capital is
+                        hedged against market volatility. He is an expert in derivative strategies and non-correlated
+                        alternative assets.</p>
+                    <p class="expert-bio">Prior to joining us, Vikram was a lead architect for complex risk models in
+                        major hedge funds, bringing an uncompromising level of precision to your portfolio's safety.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- =========================
+Market Insights Section Start
+========================= -->
+    <section class="market-insights scroll-reveal" id="market-insights">
+
+        <div class="container">
+
+            <div class="section-title">
+                <span>Latest Updates</span>
+                <h2>Market Insights</h2>
+                <p>
+                    Stay informed with expert analysis, investment strategies,
+                    retirement planning and tax-saving opportunities.
+                </p>
+            </div>
+
+            <div class="insights-grid">
+
+
+                <div class="featured-card">
+
+                    <div class="image">
+                        <img src="./asset/a5.webp" alt="">
+                        <span class="category">Markets</span>
+                    </div>
+
+                    <div class="content">
+
+                        <div class="date">
+                            12 July 2026 • 8 Min Read
+                        </div>
+
+                        <h3>
+                            Global Markets Continue Strong Growth Amid Investor Confidence
+                        </h3>
+
+                        <p>
+                            Discover how changing interest rates, technology
+                            investments and diversified portfolios are shaping
+                            long-term wealth creation.
+                        </p>
+
+                        <a href="#">
+                            Read Article
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="side-articles">
+
+                    <div class="small-card">
+
+                        <span class="category1 retirement">
+                            Retirement
+                        </span>
+
+                        <h4>
+                            7 Retirement Planning Tips Before Age 50
+                        </h4>
+
+                        <a href="#">
+                            Learn More
+                        </a>
+
+                    </div>
+
+                    <div class="small-card">
+
+                        <span class="category1 tax">
+                            Tax
+                        </span>
+
+                        <h4>
+                            Smart Tax Saving Strategies Every Investor Should Know
+                        </h4>
+
+                        <a href="#">
+                            Learn More
+                        </a>
+
+                    </div>
+
+                    <div class="small-card">
+
+                        <span class="category1 investment">
+                            Investments
+                        </span>
+
+                        <h4>
+                            Diversify Your Portfolio For Better Long-Term Returns
+                        </h4>
+
+                        <a href="#">
+                            Learn More
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- =========================
+Market Insights Section End
+========================= -->
+
+
+    <section class="wealth-section awards-section" id="awards-achievements">
+        <div class="awards-container">
+
+
+            <div class="awards-left" data-aos="fade-right">
+                <h2>Milestones of Trust & Excellence</h2>
+                <p>Our commitment to securing your financial future has earned us global recognition and long-lasting
+                    partnerships.</p>
+
+                <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=600&q=80"
+                    alt="Wealth Management" class="awards-img">
+
+                <button class="cta-btn">Explore Our Track Record</button>
+            </div>
+
+
+            <div class="awards-right" data-aos="fade-left">
+
+
+                <div class="award-card">
+                    <div class="icon">📈</div>
+                    <div class="counter-box">
+                        <span class="counter" data-target="15">0</span><span class="aqua-text">+</span>
+                    </div>
+                    <h3>Years Experience</h3>
+                    <p>Navigating complex market environments.</p>
+                </div>
+
+
+                <div class="award-card">
+                    <div class="icon">💼</div>
+                    <div class="counter-box">
+                        <span class="aqua-text">₹</span><span class="counter" data-target="2">0</span><span
+                            class="aqua-text">B+</span>
+                    </div>
+                    <h3>Assets Managed</h3>
+                    <p>Trusted with substantial capital preservation.</p>
+                </div>
+
+
+                <div class="award-card">
+                    <div class="icon">👥</div>
+                    <div class="counter-box">
+                        <span class="counter" data-target="10">0</span><span class="aqua-text">K+</span>
+                    </div>
+                    <h3>Active Clients</h3>
+                    <p>Empowering high-net-worth families.</p>
+                </div>
+
+
+                <div class="award-card">
+                    <div class="icon">🛡️</div>
+                    <div class="counter-box">
+                        <span class="counter" data-target="98">0</span><span class="aqua-text">%</span>
+                    </div>
+                    <h3>Client Retention</h3>
+                    <p>Unwavering dedication and exceptional advisory.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="premium-cta" id="sec-12-cta">
+
+
+        <div class="particles-container">
+            <span></span><span></span><span></span><span></span><span></span>
+        </div>
+
+
+        <div class="cta-heading-container" data-aos="fade-down" data-aos-duration="1000">
+            <h2 class="section-title">Ready to Take the Next Step?</h2>
+            <div class="title-underline"></div>
+        </div>
+
+
+        <div class="cta-card" data-aos="zoom-in" data-aos-duration="1200">
+            <h3 class="large-cta-text">Let's Build Your Financial Future Together</h3>
+
+            <p class="cta-subtitle">Unlock tailored wealth management and personalized investment strategies. Experience
+                true financial freedom with expert guidance.</p>
+
+            <div class="cta-buttons-container">
+                <button class="cta-btn cta-btn-book">Book Consultation</button>
+                <button class="cta-btn cta-btn-invest">Start Investing</button>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+
+    <footer class="footer" id="footer">
+        <div class="footer-container">
+
+
+            <div class="footer-col" data-aos="fade-up" data-aos-delay="0">
+                <div class="logo">
+                    <a href="index.html"><img src="./asset/Logo blue.webp" alt="logo"></a>
+                </div>
+                <p class="footer-desc">
+                    Stackly Wealth empowers individuals, families, and businesses to achieve lasting financial success
+                    through personalized wealth management. </p>
+                <div class="social-icons">
+                    <a href="404page.html"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="404page.html"><i class="fab fa-twitter"></i></a>
+                    <a href="404page.html"><i class="fab fa-instagram"></i></a>
+                    <a href="404page.html"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+
+            <div class="footer-col" data-aos="fade-up" data-aos-delay="100">
+                <h4>Explore</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                    <li><a href="#services"><i class="fas fa-chevron-right"></i> Services</a></li>
+                    <li><a href="#portfolio"><i class="fas fa-chevron-right"></i> About us</a></li>
+                    <li><a href="#insights"><i class="fas fa-chevron-right"></i> Blog</a></li>
+                    <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+                </ul>
+            </div>
+
+
+            <div class="footer-col" data-aos="fade-up" data-aos-delay="200">
+                <h4>Resources</h4>
+                <ul class="footer-links">
+                    <li><a href="404page.html"><i class="fas fa-chevron-right"></i> Investment Planning</a></li>
+                    <li><a href="404page.html"><i class="fas fa-chevron-right"></i> Portfolio Management</a></li>
+                    <li><a href="404page.html"><i class="fas fa-chevron-right"></i> Wealth Management</a></li>
+                    <li><a href="404page.html"><i class="fas fa-chevron-right"></i> Retirement Solutions</a></li>
+                    <li><a href="404page.html"><i class="fas fa-chevron-right"></i> Financial Advisory</a></li>
+                </ul>
+            </div>
+
+
+            <div class="footer-col" data-aos="fade-up" data-aos-delay="300">
+                <h4>Connect</h4>
+                <ul class="footer-contact">
+                    <li><i class="fas fa-envelope"></i> contact@stacklywealth.com</li>
+                    <li><i class="fas fa-phone-alt"></i> +91 9876543210</li>
+                    <li><i class="fas fa-map-marker-alt"></i>MMR Complex, Chinna Thirupathi,<br>Salem, NY 10001
+                    <li><i class="fas fa-clock"></i> Mon – Fri: 9:00 AM – 6:00 PM<br>Priority Client Support 24/7</li>
+                </ul>
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom" data-aos="fade-in" data-aos-delay="400">
+            <p>&copy; 2026 Stackly Wealth Management. All rights reserved. Securing Your Legacy.</p>
+            <div class="footer-bottom-links">
+                <a href="404page.html">Privacy Policy</a>
+                <a href="404page.html">Terms of Service</a>
+                <a href="404page.html">Cookie Policy</a>
+                <a href="404page.html">Accessibility</a>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="script.js"></script>
+
+    <script>
+        // Intersection Observer for Scroll Animations
+        document.addEventListener("DOMContentLoaded", function () {
+            const reveals = document.querySelectorAll(".reveal");
+
+            const revealOptions = {
+                threshold: 0.15, // 15% of the element must be visible before it animates
+                rootMargin: "0px 0px -50px 0px"
+            };
+
+            const revealOnScroll = new IntersectionObserver(function (entries, observer) {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) {
+                        return;
+                    } else {
+                        entry.target.classList.add("active");
+                        // Stop observing once it has appeared (optional: remove this line if you want it to hide/show repeatedly)
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, revealOptions);
+
+            reveals.forEach(reveal => {
+                revealOnScroll.observe(reveal);
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Get Slider Elements
+            const amountSlider = document.getElementById("invest-amount");
+            const yearsSlider = document.getElementById("invest-years");
+            const returnSlider = document.getElementById("invest-return");
+
+            // Get Display Elements
+            const amountDisplay = document.getElementById("amount-display");
+            const yearsDisplay = document.getElementById("years-display");
+            const returnDisplay = document.getElementById("return-display");
+
+            const totalInvestedResult = document.getElementById("total-invested-result");
+            const estimatedReturnResult = document.getElementById("estimated-return-result");
+            const profitResult = document.getElementById("profit-result");
+
+            // Indian Rupee Formatter
+            const formatRupee = (num) => {
+                return new Intl.NumberFormat('en-IN', {
+                    style: 'currency',
+                    currency: 'INR',
+                    maximumFractionDigits: 0
+                }).format(num);
+            };
+
+            // Calculate Compound Interest
+            function calculateReturns() {
+                const p = parseFloat(amountSlider.value);
+                const t = parseFloat(yearsSlider.value);
+                const r = parseFloat(returnSlider.value) / 100;
+
+                // Compounded annually formula: A = P(1 + r)^t
+                const futureValue = p * Math.pow(1 + r, t);
+                const profit = futureValue - p;
+
+                // Update Slider Labels
+                amountDisplay.innerText = formatRupee(p);
+                yearsDisplay.innerText = t + " Years";
+                returnDisplay.innerText = (r * 100) + "%";
+
+                // Update Result Card
+                totalInvestedResult.innerText = formatRupee(p);
+                estimatedReturnResult.innerText = formatRupee(futureValue);
+                profitResult.innerText = formatRupee(profit);
+            }
+
+            // Add Event Listeners
+            amountSlider.addEventListener("input", calculateReturns);
+            yearsSlider.addEventListener("input", calculateReturns);
+            returnSlider.addEventListener("input", calculateReturns);
+
+            // Initial Calculation
+            calculateReturns();
+        });
+
+        const revealElements = document.querySelectorAll(".scroll-reveal");
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("active");
+                }
+            });
+        }, {
+            threshold: 0.15
+        });
+
+        revealElements.forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const counters = document.querySelectorAll('.counter');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const targetCounters = entry.target.querySelectorAll('.counter');
+                        targetCounters.forEach(counter => {
+                            const target = +counter.getAttribute('data-target');
+                            const speed = 40;
+
+                            const updateCount = () => {
+                                const count = +counter.innerText;
+                                const increment = target / speed;
+                                if (count < target) {
+                                    counter.innerText = Math.ceil(count + increment);
+                                    setTimeout(updateCount, 30);
+                                } else {
+                                    counter.innerText = target;
+                                }
+                            };
+
+                            if (counter.innerText === "0") {
+                                updateCount();
+                            }
+                        });
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            observer.observe(document.querySelector('.awards-section'));
+        });
+    </script>
+</body>
+
+</html>
