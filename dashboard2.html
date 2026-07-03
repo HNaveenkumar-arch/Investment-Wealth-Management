@@ -813,7 +813,11 @@
         });
         document.addEventListener('DOMContentLoaded', () => {
 
-            let userEmail = localStorage.getItem('userEmail') || "advisor_demo@finance.com";
+            let userEmail = localStorage.getItem('userEmail');
+            if(!userEmail){
+                alert("You must login");
+                window.location.href='index.html'
+            }
 
 
             let rawName = userEmail.split('@')[0];

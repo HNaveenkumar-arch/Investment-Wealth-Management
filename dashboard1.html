@@ -49,8 +49,9 @@
             <li class="nav-item" onclick="switchView('view-settings', this)">⚙️ Settings</li>
         </ul>
         <div class="sidebar-bottom">
-            <a href="index.html" class="btn-sidebar btn-home">🏠 Back to Home</a>
-            <a href="login.html" class="btn-sidebar btn-logout">🚪 Logout</a>
+ <!-- Remove the direct href to login.html and add an ID -->
+<a href="index.html" class="btn-sidebar btn-home">🏠 Back to Home</a>
+<a href="#" id="logoutBtn" class="btn-sidebar btn-logout">🚪 Logout</a>
         </div>
     </nav>
 
@@ -1012,7 +1013,11 @@
         });
         document.addEventListener('DOMContentLoaded', () => {
 
-            let userEmail = localStorage.getItem('userEmail') || "advisor_demo@finance.com";
+            let userEmail = localStorage.getItem('userEmail');
+            if(!userEmail){
+                alert("You must login");
+                window.location.href='index.html'
+            }
 
 
             let rawName = userEmail.split('@')[0];
@@ -1132,6 +1137,33 @@
 
             initScrollAnimations();
         });
+
+
+        document.addEventListener("DOMContentLoaded", () => { 
+    const isAuthenticated = localStorage.getItem('userEmail');
+
+    if (!isAuthenticated) {
+        // Redirect unauthenticated users immediately
+        window.location.replace('login.html'); 
+        // Using replace() prevents them from using the back button to return to the dashboard
+        return; 
+    }
+
+    // --- 2. LOGOUT LOGIC ---
+    const logoutBtn = document.getElementById('logoutBtn');
+    if (logoutBtn) {
+        logoutBtn.addEventListener('click', (e) => {
+            e.preventDefault(); // Prevent default anchor behavior
+            
+            // Clear the authentication token and any other sensitive user data
+            localStorage.removeItem('userEmail');
+            localStorage.removeItem('userData');
+            
+            // Redirect to login page
+            window.location.replace('login.html');
+        });
+    }
+});
     </script>
 </body>
 
