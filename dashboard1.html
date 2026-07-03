@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Your Website Title Here">
+    <meta property="og:description" content="Join our premium online learning platform and upgrade your skills today.">
+    <meta property="og:image" content="https://yourwebsite.com/asset/preview-image.jpg">
+    <meta property="og:url" content="https://yourwebsite.com">
+    <meta property="og:type" content="website">
+    <meta name="description"
+        content="Join our premium online learning platform. Access interactive courses, live community zones, and expert tutors to upgrade your skills today.">
+    <link rel="icon" type="image/png" href="./asset/logo_Favicon.webp">
+    <title>Investor Dashboard</title>
+    <link rel="stylesheet" href="dashboard1.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <div class="preloader-overlay" id="preloader">
+        <div class="preloader-content">
+            <div class="aqua-ring"></div>
+            <div class="preloader-icon">
+                <i class="fa-solid fa-chart-line"></i>
+            </div>
+            <div class="preloader-text">TECH WEALTH</div>
+            <div class="preloader-subtext">Optimizing Assets...</div>
+        </div>
+    </div>
+
+
+    <nav class="sidebar" id="sidebar">
+        <div class="nav-logo">
+            <a href="index.html">
+                <img src="./asset/aqualogo.webp" alt="logo">
+            </a>
+        </div>
+        <ul class="nav-menu">
+            <li class="nav-item active" onclick="switchView('view-dashboard', this)">📊 Dashboard</li>
+            <li class="nav-item" onclick="switchView('view-portfolio', this)">💼 My Portfolio</li>
+            <li class="nav-item" onclick="switchView('view-investments', this)">📈 Investments</li>
+            <li class="nav-item" onclick="switchView('view-transactions', this)">💳 Transactions</li>
+            <li class="nav-item" onclick="switchView('view-settings', this)">⚙️ Settings</li>
+        </ul>
+        <div class="sidebar-bottom">
+            <a href="index.html" class="btn-sidebar btn-home">🏠 Back to Home</a>
+            <a href="login.html" class="btn-sidebar btn-logout">🚪 Logout</a>
+        </div>
+    </nav>
+
+
+    <main class="main-content">
+
+
+        <header class="header">
+            <div class="header-left">
+                <button class="mobile-toggle" id="menuToggle">☰</button>
+                <div class="header-title">Investor Portal</div>
+            </div>
+
+            <div class="header-actions">
+                <button class="notify-btn" onclick="window.location.href='404page.html'">🔔<span
+                        class="badge">3</span></button>
+
+
+                <img src="./asset/w1.webp" class="user-avatar" alt="Profile" loading="lazy">
+            </div>
+        </header>
+
+
+        <div class="content-wrapper">
+
+
+            <section id="view-dashboard" class="view-section active scroll-animate">
+
+
+                <div class="welcome-banner">
+                    <span class="dashboard-badge">💼 Investor Dashboard</span>
+                    <h1 id="headerName">Hi, Loading... 👋</h1>
+                    <p>Track your assets and grow your wealth today!</p>
+                </div>
+
+
+                <h3 class="section-title">📊 Portfolio Overview</h3>
+                <div class="cards-grid" style="margin-bottom: 30px;">
+                    <div class="card">
+                        <h3>Total Balance</h3>
+                        <p class="amount">$24,500.00</p>
+                    </div>
+                    <div class="card">
+                        <h3>Total Invested</h3>
+                        <p class="amount">$18,200.00</p>
+                    </div>
+                    <div class="card">
+                        <h3>Total Returns</h3>
+                        <p class="amount profit">+$3,450.00 (15%)</p>
+                    </div>
+                </div>
+
+
+                <h3 class="section-title">🍩 Asset Allocation</h3>
+                <div class="card chart-card" style="margin-bottom: 30px;">
+                    <div class="chart-container">
+                        <canvas id="investorAllocationChart"></canvas>
+                    </div>
+                </div>
+
+
+                <h3 class="section-title" style="margin-bottom: 20px;">📈 Featured Opportunity</h3>
+                <div class="card featured-client-card" style="margin-bottom: 30px;">
+
+                    <img src="./asset/q38.webp" alt="Market Insight" class="featured-img" loading="lazy">
+
+                    <div class="featured-content">
+                        <span class="dashboard-badge"
+                            style="background-color: rgba(16, 185, 129, 0.1); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.3);">Hot
+                            Sector</span>
+                        <h3 class="featured-title">Green Energy ETFs</h3>
+                        <p class="featured-desc">
+                            Renewable energy stocks have seen a <strong>12% surge</strong> this month. Based on your
+                            risk profile, adding a Green Energy ETF could diversify your portfolio and boost long-term
+                            yields.
+                        </p>
+                        <button class="btn-primary" style="margin-top: 10px;"
+                            onclick="window.location.href='404page.html'">Research Fund</button>
+                    </div>
+                </div>
+
+
+                <h3 class="section-title">🏆 Top Holdings</h3>
+                <div class="cards-grid" style="margin-bottom: 30px;">
+
+                    <div class="card holding-card">
+                        <img src="./asset/w2.webp" alt="Stock" class="holding-img" loading="lazy">
+                        <div class="holding-info">
+                            <h4>Apple Inc. (AAPL)</h4>
+                            <p>Tech Sector</p>
+                        </div>
+                        <div class="holding-stats">
+                            <strong class="profit">+8.4%</strong>
+                            <p>$4,200</p>
+                        </div>
+                    </div>
+
+                    <div class="card holding-card">
+                        <img src="./asset/w3.webp" alt="Stock" class="holding-img" loading="lazy">
+                        <div class="holding-info">
+                            <h4>Tesla (TSLA)</h4>
+                            <p>Automotive</p>
+                        </div>
+                        <div class="holding-stats">
+                            <strong class="profit">+12.1%</strong>
+                            <p>$3,800</p>
+                        </div>
+                    </div>
+
+                    <div class="card holding-card">
+                        <img src="./asset/w4.webp" alt="Stock" class="holding-img" loading="lazy">
+                        <div class="holding-info">
+                            <h4>S&P 500 Index</h4>
+                            <p>Mutual Fund</p>
+                        </div>
+                        <div class="holding-stats">
+                            <strong class="profit">+4.2%</strong>
+                            <p>$8,500</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <h3 class="section-title">💳 Recent Activity</h3>
+                <div class="card" style="margin-bottom: 30px;">
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <div class="activity-icon" style="color: #10b981;">📥</div>
+                            <div class="activity-text">
+                                <h4>Dividend Received</h4>
+                                <p>Apple Inc. (AAPL) paid quarterly dividend.</p>
+                            </div>
+                            <div class="activity-time">+$45.00</div>
+                        </div>
+                        <hr class="divider">
+                        <div class="activity-item">
+                            <div class="activity-icon" style="color: var(--aqua);">🔄</div>
+                            <div class="activity-text">
+                                <h4>Monthly Deposit</h4>
+                                <p>Auto-transfer from linked bank account.</p>
+                            </div>
+                            <div class="activity-time">+$500.00</div>
+                        </div>
+                        <hr class="divider">
+                        <div class="activity-item">
+                            <div class="activity-icon" style="color: #ef4444;">📤</div>
+                            <div class="activity-text">
+                                <h4>Stock Purchased</h4>
+                                <p>Bought 2 shares of MSFT.</p>
+                            </div>
+                            <div class="activity-time">-$640.00</div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <section id="view-portfolio" class="view-section scroll-animate">
+
+
+                <div class="client-header"
+                    style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; flex-wrap: wrap; gap: 15px;">
+                    <h2 style="margin: 0;">💼 My Portfolio Details</h2>
+                    <button class="btn-primary" onclick="window.location.href='404page.html'"><span
+                            class="icon">📥</span> Download Statement</button>
+                </div>
+
+                <div class="card"
+                    style="margin-bottom: 35px; background: linear-gradient(135deg, var(--navy-deep), var(--navy-light)); border-left: 4px solid var(--aqua);">
+                    <p style="color: var(--text-gray); font-size: 14px; line-height: 1.6;">
+                        Your portfolio is currently optimized for <strong>Long-Term Aggressive Growth</strong>. We have
+                        balanced your high-yield tech equities with stable treasury bonds and real estate funds to
+                        mitigate market volatility. Your overall portfolio health is excellent, outperforming the
+                        benchmark index by 4.2% this quarter.
+                    </p>
+                </div>
+
+
+                <h3 class="section-title" style="margin-bottom: 20px;">🔄 Asset Distribution (Hover to flip)</h3>
+                <div class="cards-grid flip-cards-grid" style="margin-bottom: 35px;">
+
+
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="flip-icon">📈</div>
+                                <h3>Equities (Stocks)</h3>
+                                <p class="amount">$14,500</p>
+                                <p class="subtitle">59% of Portfolio</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3 style="margin-bottom: 10px;">Top Equity Holdings</h3>
+                                <ul class="flip-list">
+                                    <li><span>Apple (AAPL)</span> <strong>$4,200</strong></li>
+                                    <li><span>Microsoft (MSFT)</span> <strong>$3,800</strong></li>
+                                    <li><span>Tesla (TSLA)</span> <strong>$2,500</strong></li>
+                                </ul>
+                                <p style="font-size: 11px; color: var(--text-gray); margin-bottom: 15px;">Focusing on
+                                    large-cap tech for maximum capital appreciation.</p>
+                                <button class="btn-outline small-btn" onclick="window.location.href='404page.html'">View
+                                    All Stocks</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="flip-icon">🏛️</div>
+                                <h3>Fixed Income</h3>
+                                <p class="amount">$6,000</p>
+                                <p class="subtitle">25% of Portfolio</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3 style="margin-bottom: 10px;">Bond Holdings</h3>
+                                <ul class="flip-list">
+                                    <li><span>US 10-Yr Treasury</span> <strong>$3,000</strong></li>
+                                    <li><span>Corporate Bonds</span> <strong>$2,000</strong></li>
+                                    <li><span>Muni Bonds</span> <strong>$1,000</strong></li>
+                                </ul>
+                                <p style="font-size: 11px; color: var(--text-gray); margin-bottom: 15px;">Provides
+                                    stable yields and protects against sudden equity drops.</p>
+                                <button class="btn-outline small-btn" onclick="window.location.href='404page.html'">View
+                                    All Bonds</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="flip-icon">🏢</div>
+                                <h3>Alternatives</h3>
+                                <p class="amount">$4,000</p>
+                                <p class="subtitle">16% of Portfolio</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3 style="margin-bottom: 10px;">Alternative Assets</h3>
+                                <ul class="flip-list">
+                                    <li><span>Global REITs</span> <strong>$2,500</strong></li>
+                                    <li><span>Bitcoin (BTC)</span> <strong>$1,000</strong></li>
+                                    <li><span>Gold ETF (GLD)</span> <strong>$500</strong></li>
+                                </ul>
+                                <p style="font-size: 11px; color: var(--text-gray); margin-bottom: 15px;">High-risk,
+                                    high-reward assets for inflation hedging.</p>
+                                <button class="btn-outline small-btn" onclick="window.location.href='404page.html'">View
+                                    Alternatives</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <h3 class="section-title" style="margin-bottom: 20px;">🧠 AI Strategy Analysis</h3>
+                <div class="card featured-client-card" style="margin-bottom: 35px;">
+                    <img src="./asset/q20.webp" alt="Strategy" class="featured-img" loading="lazy">
+                    <div class="featured-content">
+                        <span class="dashboard-badge"
+                            style="background-color: rgba(0, 229, 255, 0.1); color: var(--aqua); padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: bold;">Smart
+                            Insight</span>
+                        <h3 class="featured-title" style="margin: 10px 0;">Rebalancing Recommendation</h3>
+                        <p class="featured-desc"
+                            style="color: var(--text-gray); font-size: 14px; line-height: 1.6; margin-bottom: 20px;">
+                            Your portfolio has drifted slightly due to the recent bull run in the technology sector.
+                            Your equities are now <strong>4% above</strong> your target allocation of 55%. Our AI model
+                            suggests selling a fraction of your highest-performing tech stocks and reinvesting the
+                            profits into undervalued Real Estate Investment Trusts (REITs).
+                        </p>
+                        <div class="profile-action-btns" style="display: flex; gap: 15px; flex-wrap: wrap;">
+                            <button class="btn-primary" onclick="window.location.href='404page.html'">Approve
+                                Rebalance</button>
+                            <button class="btn-outline" onclick="window.location.href='404page.html'">Review
+                                Details</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <h3 class="section-title" style="margin-bottom: 20px;">📊 Sector Performance Breakdown</h3>
+                <div class="card" style="margin-bottom: 35px;">
+                    <div class="asset-item">
+                        <div class="asset-info"
+                            style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                            <span style="color: var(--text-white);">Information Technology</span>
+                            <span class="profit" style="color: #10b981;">+18.4% YTD</span>
+                        </div>
+                        <div class="progress-bg"
+                            style="width: 100%; height: 8px; background: var(--navy-deep); border-radius: 4px; overflow: hidden; border: 1px solid var(--border-color);">
+                            <div class="progress-bar" style="width: 85%; height: 100%; background: var(--aqua);"></div>
+                        </div>
+                    </div>
+
+                    <div class="asset-item" style="margin-top: 25px;">
+                        <div class="asset-info"
+                            style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                            <span style="color: var(--text-white);">Healthcare & Biotech</span>
+                            <span class="profit" style="color: #10b981;">+9.2% YTD</span>
+                        </div>
+                        <div class="progress-bg"
+                            style="width: 100%; height: 8px; background: var(--navy-deep); border-radius: 4px; overflow: hidden; border: 1px solid var(--border-color);">
+                            <div class="progress-bar" style="width: 60%; height: 100%; background: var(--aqua);"></div>
+                        </div>
+                    </div>
+
+                    <div class="asset-item" style="margin-top: 25px;">
+                        <div class="asset-info"
+                            style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                            <span style="color: var(--text-white);">Consumer Discretionary</span>
+                            <span style="color: #ef4444;">-2.1% YTD</span>
+                        </div>
+                        <div class="progress-bg"
+                            style="width: 100%; height: 8px; background: var(--navy-deep); border-radius: 4px; overflow: hidden; border: 1px solid var(--border-color);">
+                            <div class="progress-bar" style="width: 30%; height: 100%; background: #ef4444;"></div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <h3 class="section-title" style="margin-bottom: 20px;">💸 Recent Yields & Dividends</h3>
+                <div class="card">
+                    <div class="activity-list" style="display: flex; flex-direction: column;">
+                        <div class="activity-item"
+                            style="display: flex; align-items: center; gap: 15px; padding: 10px 0;">
+                            <div class="activity-icon"
+                                style="color: #10b981; font-size: 20px; background: var(--navy-deep); width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; border: 1px solid var(--border-color);">
+                                💵</div>
+                            <div class="activity-text" style="flex: 1;">
+                                <h4 style="color: var(--text-white); font-size: 14px; margin-bottom: 3px;">Apple (AAPL)
+                                    Dividend</h4>
+                                <p style="color: var(--text-gray); font-size: 12px;">Quarterly payout of $0.24 per
+                                    share.</p>
+                            </div>
+                            <div class="activity-time" style="color: var(--text-white); font-weight: bold;">+$36.00
+                            </div>
+                        </div>
+                        <hr class="divider"
+                            style="border: 0; height: 1px; background: var(--border-color); margin: 10px 0;">
+                        <div class="activity-item"
+                            style="display: flex; align-items: center; gap: 15px; padding: 10px 0;">
+                            <div class="activity-icon"
+                                style="color: #10b981; font-size: 20px; background: var(--navy-deep); width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; border: 1px solid var(--border-color);">
+                                💵</div>
+                            <div class="activity-text" style="flex: 1;">
+                                <h4 style="color: var(--text-white); font-size: 14px; margin-bottom: 3px;">US Treasury
+                                    Bond Yield</h4>
+                                <p style="color: var(--text-gray); font-size: 12px;">Semi-annual coupon payment
+                                    processed.</p>
+                            </div>
+                            <div class="activity-time" style="color: var(--text-white); font-weight: bold;">+$125.00
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <section id="view-investments" class="view-section scroll-animate">
+
+
+                <div class="client-header"
+                    style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; flex-wrap: wrap; gap: 15px;">
+                    <h2 style="margin: 0;">📈 My Investments</h2>
+                    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                        <button class="btn-outline" onclick="window.location.href='404page.html'"><span
+                                class="icon">📊</span> Export Report</button>
+                        <button class="btn-primary" onclick="window.location.href='404page.html'"><span
+                                class="icon">💰</span> Add Funds</button>
+                    </div>
+                </div>
+
+
+                <h3 class="section-title" style="margin-bottom: 20px;">🏆 Top Performer of the Month</h3>
+                <div class="card featured-client-card" style="margin-bottom: 35px;">
+
+                    <img src="./asset/q16.webp" alt="Top Performer" class="featured-img" loading="lazy">
+
+                    <div class="featured-content">
+                        <span class="dashboard-badge"
+                            style="background-color: rgba(16, 185, 129, 0.1); color: #10b981; padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: bold;">+22.4%
+                            Profit</span>
+                        <h3 class="featured-title" style="margin: 10px 0;">Global Tech Innovation ETF</h3>
+                        <p class="featured-desc"
+                            style="color: var(--text-gray); font-size: 14px; line-height: 1.6; margin-bottom: 20px;">
+                            Your investment in the Global Tech ETF has significantly outperformed the market. Driven by
+                            recent advancements in Artificial Intelligence and semiconductor manufacturing, this fund
+                            has generated massive yields this quarter.
+                        </p>
+                        <div class="featured-stats"
+                            style="display: flex; gap: 15px; margin-bottom: 15px; flex-wrap: wrap;">
+                            <div class="f-stat"
+                                style="background: var(--navy-deep); padding: 12px; border-radius: 8px; border: 1px solid var(--border-color); flex: 1;">
+                                <span style="font-size: 12px; color: var(--text-gray);">Invested</span>
+                                <strong
+                                    style="display: block; font-size: 16px; color: var(--text-white); margin-top: 5px;">$5,000.00</strong>
+                            </div>
+                            <div class="f-stat"
+                                style="background: var(--navy-deep); padding: 12px; border-radius: 8px; border: 1px solid var(--border-color); flex: 1;">
+                                <span style="font-size: 12px; color: var(--text-gray);">Current Value</span>
+                                <strong
+                                    style="display: block; font-size: 16px; color: var(--aqua); margin-top: 5px;">$6,120.00</strong>
+                            </div>
+                        </div>
+                        <button class="btn-primary" onclick="window.location.href='404page.html'">Buy More
+                            Shares</button>
+                    </div>
+                </div>
+
+
+                <h3 class="section-title" style="margin-bottom: 20px;">🟢 Active Investments</h3>
+                <div class="cards-grid" style="margin-bottom: 35px;">
+
+                    <div class="card holding-card">
+                        <img src="./asset/s1.webp" alt="Asset" class="holding-img" loading="lazy">
+                        <div class="holding-info">
+                            <h4>Vanguard Total Stock</h4>
+                            <p>Index Fund</p>
+                        </div>
+                        <div class="holding-stats">
+                            <strong class="profit" style="color: #10b981;">+6.2%</strong>
+                            <p style="color: var(--text-white); font-weight: bold; font-size: 15px;">$8,240</p>
+                        </div>
+                    </div>
+
+                    <div class="card holding-card">
+                        <img src="./asset/s2.webp" alt="Asset" class="holding-img" loading="lazy">
+                        <div class="holding-info">
+                            <h4>Bitcoin Trust (GBTC)</h4>
+                            <p>Cryptocurrency</p>
+                        </div>
+                        <div class="holding-stats">
+                            <strong class="profit" style="color: #10b981;">+14.5%</strong>
+                            <p style="color: var(--text-white); font-weight: bold; font-size: 15px;">$2,100</p>
+                        </div>
+                    </div>
+
+                    <div class="card holding-card">
+                        <img src="./asset/s3.webp" alt="Asset" class="holding-img" loading="lazy">
+                        <div class="holding-info">
+                            <h4>Realty Income Corp</h4>
+                            <p>Real Estate</p>
+                        </div>
+                        <div class="holding-stats">
+                            <strong
+                                style="color: #ef4444; display: block; font-size: 14px; margin-bottom: 4px;">-1.2%</strong>
+                            <p style="color: var(--text-white); font-weight: bold; font-size: 15px;">$3,400</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <h3 class="section-title" style="margin-bottom: 20px;">🚀 New Opportunity (Pre-IPO)</h3>
+                <div class="card featured-client-card" style="margin-bottom: 35px; flex-direction: row-reverse;">
+
+
+                    <img src="./asset/a5.webp" alt="Opportunity" class="featured-img" loading="lazy">
+
+                    <div class="featured-content">
+                        <span class="dashboard-badge"
+                            style="background-color: rgba(245, 158, 11, 0.1); color: #f59e0b; padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: bold;">Exclusive
+                            Access</span>
+                        <h3 class="featured-title" style="margin: 10px 0;">FinTech Startup IPO</h3>
+                        <p class="featured-desc"
+                            style="color: var(--text-gray); font-size: 14px; line-height: 1.6; margin-bottom: 20px;">
+                            As a premium investor, you have early access to the upcoming IPO of a leading payment
+                            gateway startup. The company has shown a 300% YOY revenue growth and is backed by top tier
+                            venture capital firms.
+                        </p>
+                        <div class="profile-action-btns" style="display: flex; gap: 15px; flex-wrap: wrap;">
+                            <button class="btn-primary" onclick="window.location.href='404page.html'">View
+                                Prospectus</button>
+                            <button class="btn-outline" onclick="window.location.href='404page.html'">Register
+                                Interest</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <h3 class="section-title" style="margin-bottom: 20px;">📝 Recent Trade History</h3>
+                <div class="card">
+                    <div class="activity-list" style="display: flex; flex-direction: column;">
+
+                        <div class="activity-item"
+                            style="display: flex; align-items: center; gap: 15px; padding: 10px 0;">
+                            <div class="activity-icon"
+                                style="color: #10b981; font-size: 20px; background: var(--navy-deep); width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; border-radius: 8px; border: 1px solid var(--border-color);">
+                                BUY</div>
+                            <div class="activity-text" style="flex: 1;">
+                                <h4 style="color: var(--text-white); font-size: 15px; margin-bottom: 3px;">Purchased 10
+                                    Shares of MSFT</h4>
+                                <p style="color: var(--text-gray); font-size: 12px;">Market Order executed at
+                                    $420.50/share</p>
+                            </div>
+                            <div class="activity-time" style="color: #ef4444; font-weight: bold;">-$4,205.00</div>
+                        </div>
+
+                        <hr class="divider"
+                            style="border: 0; height: 1px; background: var(--border-color); margin: 10px 0;">
+
+                        <div class="activity-item"
+                            style="display: flex; align-items: center; gap: 15px; padding: 10px 0;">
+                            <div class="activity-icon"
+                                style="color: #ef4444; font-size: 20px; background: var(--navy-deep); width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; border-radius: 8px; border: 1px solid var(--border-color);">
+                                SELL</div>
+                            <div class="activity-text" style="flex: 1;">
+                                <h4 style="color: var(--text-white); font-size: 15px; margin-bottom: 3px;">Sold 5 Shares
+                                    of TSLA</h4>
+                                <p style="color: var(--text-gray); font-size: 12px;">Limit Order executed at
+                                    $250.00/share</p>
+                            </div>
+                            <div class="activity-time" style="color: #10b981; font-weight: bold;">+$1,250.00</div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </section>
+
+
+            <section id="view-transactions" class="view-section scroll-animate">
+
+
+                <div class="client-header"
+                    style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; flex-wrap: wrap; gap: 15px;">
+                    <h2 style="margin: 0;">💳 Transaction History</h2>
+                    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                        <button class="btn-outline" onclick="window.location.href='404page.html'"><span
+                                class="icon">📅</span> Filter by Date</button>
+                        <button class="btn-primary" onclick="window.location.href='404page.html'"><span
+                                class="icon">📥</span> Download PDF</button>
+                    </div>
+                </div>
+
+
+                <h3 class="section-title" style="margin-bottom: 20px;">📊 July 2026 Summary</h3>
+                <div class="card featured-client-card" style="margin-bottom: 35px;">
+
+                    <img src="./asset/q39.webp" alt="Transaction Summary" class="featured-img" loading="lazy">
+
+                    <div class="featured-content">
+                        <span class="dashboard-badge"
+                            style="background-color: rgba(0, 229, 255, 0.1); color: var(--aqua); padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: bold;">Monthly
+                            Insight</span>
+                        <h3 class="featured-title" style="margin: 10px 0;">Cash Flow Overview</h3>
+                        <p class="featured-desc"
+                            style="color: var(--text-gray); font-size: 14px; line-height: 1.6; margin-bottom: 20px;">
+                            Your net cash flow is positive this month. You have successfully deposited more funds into
+                            your investment accounts compared to your withdrawals. Your recurring dividend payments have
+                            also increased by 5%.
+                        </p>
+                        <div class="featured-stats"
+                            style="display: flex; gap: 15px; margin-bottom: 15px; flex-wrap: wrap;">
+                            <div class="f-stat"
+                                style="background: var(--navy-deep); padding: 12px; border-radius: 8px; border: 1px solid var(--border-color); flex: 1;">
+                                <span style="font-size: 12px; color: var(--text-gray);">Total In (Income)</span>
+                                <strong
+                                    style="display: block; font-size: 16px; color: #10b981; margin-top: 5px;">+$4,250.00</strong>
+                            </div>
+                            <div class="f-stat"
+                                style="background: var(--navy-deep); padding: 12px; border-radius: 8px; border: 1px solid var(--border-color); flex: 1;">
+                                <span style="font-size: 12px; color: var(--text-gray);">Total Out (Invested)</span>
+                                <strong
+                                    style="display: block; font-size: 16px; color: #ef4444; margin-top: 5px;">-$1,100.00</strong>
+                            </div>
+                        </div>
+                        <button class="btn-primary" onclick="window.location.href='404page.html'">View Detailed
+                            Analytics</button>
+                    </div>
+                </div>
+
+
+                <h3 class="section-title" style="margin-bottom: 20px;">🏦 Connected Accounts</h3>
+                <div class="cards-grid" style="margin-bottom: 35px;">
+
+
+                    <div class="card holding-card">
+                        <div class="holding-img"
+                            style="background: #000; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                            🍏</div>
+                        <div class="holding-info">
+                            <h4>Apple Pay</h4>
+                            <p>Primary Wallet</p>
+                        </div>
+                        <div class="holding-stats">
+                            <p style="color: var(--text-white); font-size: 13px;">Active</p>
+                            <button class="btn-outline small-btn" style="margin-top: 5px; padding: 4px 10px;"
+                                onclick="window.location.href='404page.html'">Manage</button>
+                        </div>
+                    </div>
+
+
+                    <div class="card holding-card">
+                        <div class="holding-img"
+                            style="background: #1a1f36; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                            💳</div>
+                        <div class="holding-info">
+                            <h4>Chase Visa</h4>
+                            <p>Ending in ••45</p>
+                        </div>
+                        <div class="holding-stats">
+                            <p style="color: var(--text-white); font-size: 13px;">Active</p>
+                            <button class="btn-outline small-btn" onclick="window.location.href='404page.html'"
+                                style="margin-top: 5px; padding: 4px 10px;">Manage</button>
+                        </div>
+                    </div>
+
+
+                    <div class="card holding-card">
+                        <div class="holding-img"
+                            style="background: #00457c; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                            🏛️</div>
+                        <div class="holding-info">
+                            <h4>Bank Wire</h4>
+                            <p>Savings Account</p>
+                        </div>
+                        <div class="holding-stats">
+                            <p style="color: #ef4444; font-size: 13px;">Action Needed</p>
+                            <button class="btn-primary small-btn" onclick="window.location.href='404page.html'"
+                                style="margin-top: 5px; padding: 4px 10px;">Verify</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <h3 class="section-title" style="margin-bottom: 20px;">📥 Recent Deposits & Yields</h3>
+                <div class="card" style="margin-bottom: 35px;">
+                    <div class="activity-list" style="display: flex; flex-direction: column;">
+
+                        <div class="activity-item"
+                            style="display: flex; align-items: center; gap: 15px; padding: 10px 0;">
+                            <img src="./asset/v19.webp" alt="Sender"
+                                style="width: 45px; height: 45px; border-radius: 50%; object-fit: cover; border: 1px solid var(--aqua);">
+                            <div class="activity-text" style="flex: 1;">
+                                <h4 style="color: var(--text-white); font-size: 15px; margin-bottom: 3px;">Monthly
+                                    Salary Deposit</h4>
+                                <p style="color: var(--text-gray); font-size: 12px;">From Tech Corp Inc.</p>
+                            </div>
+                            <div style="text-align: right;">
+                                <div class="activity-time" style="color: #10b981; font-weight: bold; font-size: 16px;">
+                                    +$3,500.00</div>
+                                <button class="btn-outline small-btn" onclick="window.location.href='404page.html'"
+                                    style="border: none; padding: 0; font-size: 11px; margin-top: 5px;">View
+                                    Receipt</button>
+                            </div>
+                        </div>
+
+                        <hr class="divider"
+                            style="border: 0; height: 1px; background: var(--border-color); margin: 10px 0;">
+
+                        <div class="activity-item"
+                            style="display: flex; align-items: center; gap: 15px; padding: 10px 0;">
+                            <div class="activity-icon"
+                                style="color: #10b981; font-size: 20px; background: var(--navy-deep); width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; border-radius: 50%; border: 1px solid var(--border-color);">
+                                📈</div>
+                            <div class="activity-text" style="flex: 1;">
+                                <h4 style="color: var(--text-white); font-size: 15px; margin-bottom: 3px;">Portfolio
+                                    Dividend (MSFT)</h4>
+                                <p style="color: var(--text-gray); font-size: 12px;">Quarterly Payout</p>
+                            </div>
+                            <div style="text-align: right;">
+                                <div class="activity-time" style="color: #10b981; font-weight: bold; font-size: 16px;">
+                                    +$145.50</div>
+                                <button class="btn-outline small-btn" onclick="window.location.href='404page.html'"
+                                    style="border: none; padding: 0; font-size: 11px; margin-top: 5px;">View
+                                    Receipt</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <h3 class="section-title" style="margin-bottom: 20px;">📤 Recent Withdrawals & Fees</h3>
+                <div class="card">
+                    <div class="activity-list" style="display: flex; flex-direction: column;">
+
+                        <div class="activity-item"
+                            style="display: flex; align-items: center; gap: 15px; padding: 10px 0;">
+                            <div class="activity-icon"
+                                style="color: #ef4444; font-size: 20px; background: var(--navy-deep); width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; border-radius: 50%; border: 1px solid var(--border-color);">
+                                🏦</div>
+                            <div class="activity-text" style="flex: 1;">
+                                <h4 style="color: var(--text-white); font-size: 15px; margin-bottom: 3px;">Auto-Invest
+                                    Transfer</h4>
+                                <p style="color: var(--text-gray); font-size: 12px;">Sent to Vanguard Index Fund</p>
+                            </div>
+                            <div style="text-align: right;">
+                                <div class="activity-time" style="color: #ef4444; font-weight: bold; font-size: 16px;">
+                                    -$500.00</div>
+                                <button class="btn-outline small-btn" onclick="window.location.href='404page.html'"
+                                    style="border: none; padding: 0; font-size: 11px; margin-top: 5px;">Track
+                                    Status</button>
+                            </div>
+                        </div>
+
+                        <hr class="divider"
+                            style="border: 0; height: 1px; background: var(--border-color); margin: 10px 0;">
+
+                        <div class="activity-item"
+                            style="display: flex; align-items: center; gap: 15px; padding: 10px 0;">
+                            <div class="activity-icon"
+                                style="color: var(--text-gray); font-size: 20px; background: var(--navy-deep); width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; border-radius: 50%; border: 1px solid var(--border-color);">
+                                ⚙️</div>
+                            <div class="activity-text" style="flex: 1;">
+                                <h4 style="color: var(--text-white); font-size: 15px; margin-bottom: 3px;">Platform
+                                    Advisory Fee</h4>
+                                <p style="color: var(--text-gray); font-size: 12px;">Monthly Service Charge</p>
+                            </div>
+                            <div style="text-align: right;">
+                                <div class="activity-time" style="color: #ef4444; font-weight: bold; font-size: 16px;">
+                                    -$15.00</div>
+                                <button class="btn-outline small-btn" onclick="window.location.href='404page.html'"
+                                    style="border: none; padding: 0; font-size: 11px; margin-top: 5px;">Download
+                                    Invoice</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </section>
+
+
+            <section id="view-settings" class="view-section scroll-animate">
+
+
+                <div class="client-header"
+                    style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; flex-wrap: wrap; gap: 15px;">
+                    <h2 style="margin: 0;">⚙️ Account Settings</h2>
+                    <button class="btn-primary" onclick="window.location.href='404page.html'"><span
+                            class="icon">✏️</span> Edit Profile</button>
+                </div>
+
+                <h3 class="section-title" style="margin-bottom: 20px;">🪪 Investor Identity</h3>
+
+                <div class="card"
+                    style="margin-bottom: 35px; padding: 0; overflow: hidden; border: 1px solid var(--aqua); text-align: center;">
+
+                    <div style="height: 120px; width: 100%; background: var(--navy-deep);">
+                        <img src="./asset/q7.webp" alt="Banner"
+                            style="width: 100%; height: 100%; object-fit: cover; opacity: 0.6;">
+                    </div>
+
+
+                    <div style="padding: 20px; position: relative;">
+
+                        <img src="./asset/s1.webp" alt="Profile"
+                            style="width: 100px; height: 100px; border-radius: 50%; border: 4px solid var(--navy-light); object-fit: cover; background: var(--navy-deep); margin-top: -70px; position: relative; z-index: 2; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+
+                        <div style="margin-top: 15px;">
+                            <h3 style="color: var(--text-white); font-size: 24px; margin-bottom: 8px;">Investor Name
+                            </h3>
+
+                            <span
+                                style="background-color: rgba(16, 185, 129, 0.1); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.3); padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: bold; display: inline-block; margin-bottom: 12px;">KYC
+                                Verified • Premium Tier</span>
+
+                            <p style="color: var(--text-gray); font-size: 14px;">Salem, Tamil Nadu • Joined Jan 2025</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <h3 class="section-title" style="margin-bottom: 20px;">⚖️ Risk Tolerance & Strategy</h3>
+                <div class="card featured-client-card"
+                    style="margin-bottom: 35px; display: flex; align-items: center; gap: 30px; background: linear-gradient(145deg, var(--navy-light) 0%, var(--navy-deep) 100%); border: 1px solid var(--border-color); padding: 25px; border-radius: 12px;">
+
+                    <img src="./asset/a22.webp" alt="Risk Profile" class="featured-img"
+                        style="width: 250px; height: 250px; border-radius: 12px; object-fit: cover; border: 2px solid var(--aqua); box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);"
+                        loading="lazy">
+
+                    <div class="featured-content" style="flex: 1;">
+                        <span class="dashboard-badge"
+                            style="background-color: rgba(245, 158, 11, 0.1); color: #f59e0b; padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: bold;">Current
+                            Setting: Aggressive</span>
+                        <h3 class="featured-title" style="margin: 10px 0; font-size: 24px; color: var(--text-white);">
+                            Growth-Focused Strategy</h3>
+                        <p class="featured-desc"
+                            style="color: var(--text-gray); font-size: 14px; line-height: 1.6; margin-bottom: 20px;">
+                            Your account is currently set to prioritize high-yield growth assets. This means higher
+                            exposure to market volatility but potential for significant long-term returns. If your
+                            financial situation has changed, you can adjust this setting.
+                        </p>
+                        <div class="profile-action-btns" style="display: flex; gap: 15px; flex-wrap: wrap;">
+                            <button class="btn-primary" onclick="window.location.href='404page.html'">Retake Risk
+                                Quiz</button>
+                            <button class="btn-outline" onclick="window.location.href='404page.html'">View Asset
+                                Limits</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <h3 class="section-title" style="margin-bottom: 20px;">🎯 Financial Goals</h3>
+                <div class="cards-grid" style="margin-bottom: 35px;">
+
+
+                    <div class="card holding-card"
+                        style="display: flex; flex-direction: column; align-items: flex-start; padding: 20px;">
+                        <div style="font-size: 30px; margin-bottom: 10px;">🏡</div>
+                        <h4 style="color: var(--text-white); font-size: 16px; margin-bottom: 5px;">Dream Home
+                            Downpayment</h4>
+                        <p style="color: var(--text-gray); font-size: 12px; margin-bottom: 15px;">Target: $50,000</p>
+
+                        <div class="progress-bg"
+                            style="width: 100%; height: 8px; background: var(--navy-deep); border-radius: 4px; overflow: hidden; border: 1px solid var(--border-color); margin-bottom: 10px;">
+                            <div class="progress-bar" style="width: 65%; height: 100%; background: var(--aqua);"></div>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; width: 100%; font-size: 12px;">
+                            <span style="color: var(--aqua); font-weight: bold;">$32,500 Saved</span>
+                            <span style="color: var(--text-gray);">65%</span>
+                        </div>
+                    </div>
+
+
+                    <div class="card holding-card"
+                        style="display: flex; flex-direction: column; align-items: flex-start; padding: 20px;">
+                        <div style="font-size: 30px; margin-bottom: 10px;">🌴</div>
+                        <h4 style="color: var(--text-white); font-size: 16px; margin-bottom: 5px;">Early Retirement Fund
+                        </h4>
+                        <p style="color: var(--text-gray); font-size: 12px; margin-bottom: 15px;">Target: $1,000,000</p>
+
+                        <div class="progress-bg"
+                            style="width: 100%; height: 8px; background: var(--navy-deep); border-radius: 4px; overflow: hidden; border: 1px solid var(--border-color); margin-bottom: 10px;">
+                            <div class="progress-bar" style="width: 12%; height: 100%; background: #10b981;"></div>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; width: 100%; font-size: 12px;">
+                            <span style="color: #10b981; font-weight: bold;">$120,000 Saved</span>
+                            <span style="color: var(--text-gray);">12%</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <h3 class="section-title" style="margin-bottom: 20px;">🔄 Automated SIPs & Rules</h3>
+                <div class="card" style="margin-bottom: 35px;">
+                    <div class="activity-list" style="display: flex; flex-direction: column;">
+
+                        <div class="activity-item"
+                            style="display: flex; align-items: center; gap: 15px; padding: 10px 0;">
+                            <div class="activity-icon"
+                                style="color: var(--aqua); font-size: 20px; background: var(--navy-deep); width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; border-radius: 8px; border: 1px solid var(--border-color);">
+                                📅</div>
+                            <div class="activity-text" style="flex: 1;">
+                                <h4 style="color: var(--text-white); font-size: 15px; margin-bottom: 3px;">Monthly Index
+                                    Fund Purchase</h4>
+                                <p style="color: var(--text-gray); font-size: 12px;">Next execution: 5th of this month
+                                </p>
+                            </div>
+                            <div style="text-align: right;">
+                                <div class="activity-time"
+                                    style="color: var(--text-white); font-weight: bold; font-size: 15px;">$500 / month
+                                </div>
+                                <button class="btn-outline small-btn" onclick="window.location.href='404page.html'"
+                                    style="padding: 4px 10px; margin-top: 5px;">Pause
+                                    SIP</button>
+                            </div>
+                        </div>
+
+                        <hr class="divider"
+                            style="border: 0; height: 1px; background: var(--border-color); margin: 10px 0;">
+
+                        <div class="activity-item"
+                            style="display: flex; align-items: center; gap: 15px; padding: 10px 0;">
+                            <div class="activity-icon"
+                                style="color: #10b981; font-size: 20px; background: var(--navy-deep); width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; border-radius: 8px; border: 1px solid var(--border-color);">
+                                ♻️</div>
+                            <div class="activity-text" style="flex: 1;">
+                                <h4 style="color: var(--text-white); font-size: 15px; margin-bottom: 3px;">Dividend
+                                    Reinvestment (DRIP)</h4>
+                                <p style="color: var(--text-gray); font-size: 12px;">Automatically buys partial shares
+                                </p>
+                            </div>
+                            <div style="text-align: right;">
+                                <span class="dashboard-badge"
+                                    style="background-color: rgba(16, 185, 129, 0.1); color: #10b981;">Active</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <h3 class="section-title" style="margin-bottom: 20px;">🔒 Security & Active Devices</h3>
+                <div class="card">
+                    <div class="activity-list" style="display: flex; flex-direction: column;">
+
+                        <div class="activity-item"
+                            style="display: flex; align-items: center; gap: 15px; padding: 10px 0;">
+                            <div class="activity-icon"
+                                style="font-size: 24px; background: var(--navy-deep); width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; border-radius: 50%; border: 1px solid var(--border-color);">
+                                💻</div>
+                            <div class="activity-text" style="flex: 1;">
+                                <h4 style="color: var(--text-white); font-size: 15px; margin-bottom: 3px;">MacBook Pro
+                                    (Chrome Browser)</h4>
+                                <p style="color: var(--aqua); font-size: 12px; font-weight: bold;">Current Active
+                                    Session</p>
+                            </div>
+                            <div style="text-align: right;">
+                                <button class="btn-outline small-btn" onclick="window.location.href='404page.html'"
+                                    style="border-color: #ef4444; color: #ef4444;">Log
+                                    Out</button>
+                            </div>
+                        </div>
+
+                        <hr class="divider"
+                            style="border: 0; height: 1px; background: var(--border-color); margin: 10px 0;">
+
+                        <div class="activity-item"
+                            style="display: flex; align-items: center; gap: 15px; padding: 10px 0;">
+                            <div class="activity-icon"
+                                style="font-size: 24px; background: var(--navy-deep); width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; border-radius: 50%; border: 1px solid var(--border-color);">
+                                📱</div>
+                            <div class="activity-text" style="flex: 1;">
+                                <h4 style="color: var(--text-white); font-size: 15px; margin-bottom: 3px;">iPhone 14
+                                    (Mobile App)</h4>
+                                <p style="color: var(--text-gray); font-size: 12px;">Last active: 2 hours ago</p>
+                            </div>
+                            <div style="text-align: right;">
+                                <button class="btn-outline small-btn" onclick="window.location.href='404page.html'"
+                                    style="border-color: #ef4444; color: #ef4444;">Log
+                                    Out</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </section>
+
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+
+            const preloader = document.getElementById("preloader");
+            const mainContent = document.getElementById("mainContent");
+
+
+            window.addEventListener("load", () => {
+                setTimeout(() => {
+                    preloader.style.opacity = "0";
+                    preloader.style.visibility = "hidden";
+
+                    mainContent.classList.remove("app-hidden");
+                    mainContent.classList.add("app-visible");
+                }, 1500);
+            });
+
+        });
+        document.addEventListener('DOMContentLoaded', () => {
+
+            let userEmail = localStorage.getItem('userEmail') || "advisor_demo@finance.com";
+
+
+            let rawName = userEmail.split('@')[0];
+            let formattedName = rawName.replace(/[._]/g, ' ');
+            let username = formattedName.charAt(0).toUpperCase() + formattedName.slice(1);
+
+
+            let headerNameEl = document.getElementById('headerName');
+            if (headerNameEl) {
+                headerNameEl.innerText = `Hi, ${username} 👋`;
+            }
+
+
+            let fallbackAvatar = document.getElementById('avatarFallback');
+            if (fallbackAvatar) {
+                fallbackAvatar.innerText = username.charAt(0).toUpperCase();
+            }
+
+
+            initScrollAnimations();
+        });
+
+
+        function switchView(viewId, element) {
+            document.querySelectorAll('.view-section').forEach(view => {
+                view.classList.remove('active', 'show');
+            });
+
+            let targetView = document.getElementById(viewId);
+            if (targetView) {
+                targetView.classList.add('active');
+                setTimeout(() => targetView.classList.add('show'), 50);
+            }
+
+            document.querySelectorAll('.nav-item').forEach(nav => nav.classList.remove('active'));
+            element.classList.add('active');
+
+
+            if (window.innerWidth <= 768) {
+                document.getElementById('sidebar').classList.remove('active');
+            }
+        }
+
+
+        const menuToggle = document.getElementById('menuToggle');
+        const sidebar = document.getElementById('sidebar');
+
+        if (menuToggle && sidebar) {
+            menuToggle.addEventListener('click', () => {
+                sidebar.classList.toggle('active');
+            });
+
+            document.addEventListener('click', (e) => {
+                if (window.innerWidth <= 768 && !sidebar.contains(e.target) && e.target !== menuToggle) {
+                    sidebar.classList.remove('active');
+                }
+            });
+        }
+
+
+        function initScrollAnimations() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.scroll-animate').forEach((el) => {
+                observer.observe(el);
+                if (el.classList.contains('active')) {
+                    setTimeout(() => el.classList.add('show'), 100);
+                }
+            });
+        }
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+
+
+            let userEmail = localStorage.getItem('userEmail') || "investor@finance.com";
+            let rawName = userEmail.split('@')[0];
+            let formattedName = rawName.replace(/[._]/g, ' ');
+            let username = formattedName.charAt(0).toUpperCase() + formattedName.slice(1);
+
+            let headerNameEl = document.getElementById('headerName');
+            if (headerNameEl) headerNameEl.innerText = `Hi, ${username} 👋`;
+
+
+            const pieCtx = document.getElementById('investorAllocationChart');
+            if (pieCtx) {
+                new Chart(pieCtx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Stocks', 'Bonds', 'Real Estate', 'Cash'],
+                        datasets: [{
+                            data: [55, 25, 15, 5],
+                            backgroundColor: ['#00e5ff', '#10b981', '#f59e0b', '#6366f1'],
+                            borderWidth: 0,
+                            hoverOffset: 4
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        cutout: '70%',
+                        plugins: {
+                            legend: {
+                                position: 'bottom',
+                                labels: { color: '#a8b2d1', padding: 20, font: { size: 13 } }
+                            }
+                        }
+                    }
+                });
+            }
+
+            initScrollAnimations();
+        });
+    </script>
+</body>
+
+</html>

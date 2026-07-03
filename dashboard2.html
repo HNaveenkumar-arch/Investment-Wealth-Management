@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Your Website Title Here">
+    <meta property="og:description" content="Join our premium online learning platform and upgrade your skills today.">
+    <meta property="og:image" content="https://yourwebsite.com/asset/preview-image.jpg">
+    <meta property="og:url" content="https://yourwebsite.com">
+    <meta property="og:type" content="website">
+    <meta name="description"
+        content="Join our premium online learning platform. Access interactive courses, live community zones, and expert tutors to upgrade your skills today.">
+    <link rel="icon" type="image/png" href="./asset/logo_Favicon.webp">
+    <title>Advisor Dashboard</title>
+    <link rel="stylesheet" href="dashboard2.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <div class="preloader-overlay" id="preloader">
+        <div class="preloader-content">
+            <div class="aqua-ring"></div>
+            <div class="preloader-icon">
+                <i class="fa-solid fa-chart-line"></i>
+            </div>
+            <div class="preloader-text">TECH WEALTH</div>
+            <div class="preloader-subtext">Optimizing Assets...</div>
+        </div>
+    </div>
+
+
+    <nav class="sidebar" id="sidebar">
+        <div class="nav-logo">
+            <a href="index.html">
+                <img src="./asset/aqualogo.webp" alt="logo">
+            </a>
+        </div>
+        <ul class="nav-menu">
+            <li class="nav-item active" onclick="switchView('view-dashboard', this)">🏠 Dashboard</li>
+            <li class="nav-item" onclick="switchView('view-clients', this)">👥 Clients</li>
+            <li class="nav-item" onclick="switchView('view-portfolios', this)">💼 Portfolios</li>
+            <li class="nav-item" onclick="switchView('view-appointments', this)">📅 Appointments</li>
+            <li class="nav-item" onclick="switchView('view-settings', this)">⚙️ Settings</li>
+        </ul>
+        <div class="sidebar-bottom">
+            <a href="index.html" class="btn-sidebar btn-home">🏠 Back to Home</a>
+            <a href="login.html" class="btn-sidebar btn-logout">🚪 Logout</a>
+        </div>
+    </nav>
+
+
+    <main class="main-content">
+
+
+        <header class="header">
+            <div class="header-left">
+                <button class="mobile-toggle" id="menuToggle">☰</button>
+                <div class="header-title">Advisor Portal</div>
+            </div>
+
+            <div class="header-actions">
+                <button class="notify-btn" onclick="window.location.href='404page.html'">🔔<span
+                        class="badge">5</span></button>
+
+                <img src="./asset/w3.webp" class="user-avatar" alt="Profile" loading="lazy">
+            </div>
+        </header>
+
+
+        <div class="content-wrapper">
+
+
+
+            <section id="view-dashboard" class="view-section active scroll-animate">
+
+
+                <div class="welcome-banner">
+                    <span class="dashboard-badge">👨‍💼 Advisor Dashboard</span>
+                    <h1 id="headerName">Hi, Loading... 👋</h1>
+                    <p>Manage your clients and their portfolios efficiently today!</p>
+                </div>
+
+
+                <div class="section-header">
+                    <h3>📊 Performance Overview</h3>
+                </div>
+                <div class="cards-grid">
+                    <div class="card">
+                        <h3>Total Clients</h3>
+                        <p class="amount">142</p>
+                    </div>
+                    <div class="card">
+                        <h3>Assets Under Management</h3>
+                        <p class="amount">$4.2M</p>
+                    </div>
+                    <div class="card">
+                        <h3>Upcoming Appointments</h3>
+                        <p class="amount profit">4 Today</p>
+                    </div>
+                </div>
+
+
+                <div class="section-header" style="margin-top: 30px;">
+                    <h3>📈 AUM Growth (YTD)</h3>
+                </div>
+                <div class="card chart-card">
+                    <div class="chart-container">
+                        <canvas id="mainDashboardChart"></canvas>
+                    </div>
+                </div>
+
+
+                <div class="dashboard-bottom-grid" style="margin-top: 30px;">
+
+
+                    <div class="card">
+                        <h3 style="margin-bottom: 15px;">🔔 Recent Client Activity</h3>
+                        <div class="activity-list">
+                            <div class="activity-item">
+                                <div class="activity-icon">💰</div>
+                                <div class="activity-text">
+                                    <h4>David Miller added funds</h4>
+                                    <p>+$15,000 to Retirement Plan</p>
+                                </div>
+                                <div class="activity-time">2h ago</div>
+                            </div>
+                            <hr class="divider">
+                            <div class="activity-item">
+                                <div class="activity-icon">🔄</div>
+                                <div class="activity-text">
+                                    <h4>Sarah Jenkins rebalanced</h4>
+                                    <p>Shifted 10% to Tech Stocks</p>
+                                </div>
+                                <div class="activity-time">5h ago</div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="card">
+                        <h3 style="margin-bottom: 15px;">⚡ Quick Actions</h3>
+                        <div class="quick-actions-grid">
+                            <button class="action-btn" onclick="window.location.href='404page.html'"><span
+                                    class="icon">➕</span> Add Client</button>
+                            <button class="action-btn" onclick="window.location.href='404page.html'"><span
+                                    class="icon">📅</span> Schedule</button>
+                            <button class="action-btn" onclick="window.location.href='404page.html'"><span
+                                    class="icon">📊</span> Report</button>
+                            <button class="action-btn" onclick="window.location.href='404page.html'"><span
+                                    class="icon">✉️</span> Update</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="dashboard-bottom-grid" style="margin-top: 20px;">
+
+
+                    <div class="card">
+                        <h3 style="margin-bottom: 15px;">🏆 Top Performing Assets</h3>
+
+                        <div class="asset-item">
+                            <div class="asset-info">
+                                <span>Tech Growth Fund (US)</span>
+                                <span class="profit">+14.2%</span>
+                            </div>
+                            <div class="progress-bg">
+                                <div class="progress-bar" style="width: 85%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="asset-item">
+                            <div class="asset-info">
+                                <span>Global Real Estate</span>
+                                <span class="profit">+8.5%</span>
+                            </div>
+                            <div class="progress-bg">
+                                <div class="progress-bar" style="width: 65%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="asset-item">
+                            <div class="asset-info">
+                                <span>Green Energy ETF</span>
+                                <span class="profit">+6.1%</span>
+                            </div>
+                            <div class="progress-bg">
+                                <div class="progress-bar" style="width: 45%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="card">
+                        <h3 style="margin-bottom: 15px;">⚠️ Important Alerts</h3>
+
+                        <div class="alert-item">
+                            <div class="alert-icon kyc-alert">📄</div>
+                            <div class="alert-text">
+                                <h4>KYC Expiring Soon</h4>
+                                <p>John Doe's documents expire in 3 days.</p>
+                            </div>
+                            <button class="btn-outline small-btn"
+                                onclick="window.location.href='404page.html'">Notify</button>
+                        </div>
+
+                        <hr class="divider">
+
+                        <div class="alert-item">
+                            <div class="alert-icon birthday-alert">🎂</div>
+                            <div class="alert-text">
+                                <h4>Client Birthday</h4>
+                                <p>Sarah Jenkins's birthday is tomorrow!</p>
+                            </div>
+                            <button class="btn-outline small-btn" onclick="window.location.href='404page.html'">Send
+                                Wish</button>
+                        </div>
+
+                    </div>
+                </div>
+
+            </section>
+
+
+
+            <section id="view-clients" class="view-section scroll-animate">
+
+
+                <div class="client-header">
+                    <h2>👥 Client Management</h2>
+                    <button class="btn-primary" onclick="window.location.href='404page.html'"><span
+                            class="icon">➕</span> Add New Client</button>
+                </div>
+
+
+                <div class="card featured-client-card" style="margin-bottom: 30px;">
+
+                    <img src="./asset/s2.webp" alt="Featured Client" class="featured-img" loading="lazy">
+
+
+                    <div class="featured-content">
+                        <span class="dashboard-badge">🌟 Client of the Month</span>
+                        <h3 class="featured-title">Sarah Jenkins</h3>
+                        <p class="featured-desc">
+                            Sarah achieved a massive <strong>25% portfolio growth</strong> this quarter through our
+                            custom tech-focused investment strategy. Her risk-adjusted returns are currently
+                            outperforming the market.
+                        </p>
+
+                        <div class="featured-stats">
+                            <div class="f-stat">
+                                <span>Total AUM</span>
+                                <strong>$1.2M</strong>
+                            </div>
+                            <div class="f-stat">
+                                <span>YTD Growth</span>
+                                <strong class="profit">+25%</strong>
+                            </div>
+                        </div>
+
+                        <button class="btn-primary" onclick="window.location.href='404page.html'"
+                            style="margin-top: 15px;">View Strategy Report</button>
+                    </div>
+                </div>
+
+
+                <h3 class="section-title">⭐ Premium Clients</h3>
+                <div class="cards-grid">
+
+                    <div class="card premium-client-card">
+                        <div class="client-avatar-wrapper">
+                            <img src="./asset/s1.webp" alt="Client" class="client-avatar" loading="lazy">
+                            <span class="status-dot online"></span>
+                        </div>
+                        <h3>Sarah Jenkins</h3>
+                        <p class="client-email">sarah.j@example.com</p>
+                        <div class="client-aum">
+                            <span>Portfolio Size</span>
+                            <strong>$1.2M</strong>
+                        </div>
+                        <div class="client-card-actions">
+                            <button class="btn-primary full-width" onclick="window.location.href='404page.html'">View
+                                Portfolio</button>
+                            <button class="btn-outline full-width mt-2"
+                                onclick="window.location.href='404page.html'">Message</button>
+                        </div>
+                    </div>
+
+
+                    <div class="card premium-client-card">
+                        <div class="client-avatar-wrapper">
+                            <img src="./asset/a20.webp" alt="Client" class="client-avatar" loading="lazy">
+                            <span class="status-dot offline"></span>
+                        </div>
+                        <h3>David Miller</h3>
+                        <p class="client-email">david.m@example.com</p>
+                        <div class="client-aum">
+                            <span>Portfolio Size</span>
+                            <strong>$850K</strong>
+                        </div>
+                        <div class="client-card-actions">
+                            <button class="btn-primary full-width" onclick="window.location.href='404page.html'">View
+                                Portfolio</button>
+                            <button class="btn-outline full-width mt-2"
+                                onclick="window.location.href='404page.html'">Message</button>
+                        </div>
+                    </div>
+
+
+                    <div class="card premium-client-card">
+                        <div class="client-avatar-wrapper">
+                            <img src="./asset/w2.webp" alt="Client" class="client-avatar" loading="lazy">
+                            <span class="status-dot online"></span>
+                        </div>
+                        <h3>Emma Watson</h3>
+                        <p class="client-email">emma.w@example.com</p>
+                        <div class="client-aum">
+                            <span>Portfolio Size</span>
+                            <strong>$2.5M</strong>
+                        </div>
+                        <div class="client-card-actions">
+                            <button class="btn-primary full-width" onclick="window.location.href='404page.html'">View
+                                Portfolio</button>
+                            <button class="btn-outline full-width mt-2"
+                                onclick="window.location.href='404page.html'">Message</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <h3 class="section-title" style="margin-top: 30px;">🆕 Recently Onboarded</h3>
+                <div class="card">
+                    <div class="client-list">
+
+                        <div class="client-list-item">
+                            <img src="./asset/s3.webp" alt="Client" class="list-avatar">
+                            <div class="list-info">
+                                <h4>Michael Brown</h4>
+                                <p>Onboarded: 2 days ago</p>
+                            </div>
+                            <div class="list-status">
+                                <span class="badge-status success">Active</span>
+                            </div>
+                            <button class="btn-outline small-btn" onclick="window.location.href='404page.html'">Setup
+                                Plan</button>
+                        </div>
+
+                        <hr class="divider">
+
+
+                        <div class="client-list-item">
+
+                            <div class="avatar-circle small-avatar">J</div>
+                            <div class="list-info">
+                                <h4>Jessica Davis</h4>
+                                <p>Onboarded: 5 days ago</p>
+                            </div>
+                            <div class="list-status">
+                                <span class="badge-status pending">Pending Docs</span>
+                            </div>
+                            <button class="btn-primary small-btn"
+                                onclick="window.location.href='404page.html'">Remind</button>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <section id="view-portfolios" class="view-section scroll-animate">
+
+
+                <div class="client-header">
+                    <h2>💼 Client Portfolios</h2>
+                    <button class="btn-primary" onclick="window.location.href='404page.html'"><span
+                            class="icon">🔄</span> Rebalance All</button>
+                </div>
+
+
+                <h3 class="section-title">🔄 Asset Distribution (Hover to flip)</h3>
+                <div class="cards-grid flip-cards-grid">
+
+
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+
+                            <div class="flip-card-front">
+                                <div class="flip-icon">📈</div>
+                                <h3>Equities (Stocks)</h3>
+                                <p class="amount">$2.4M</p>
+                                <p class="subtitle">55% of Total AUM</p>
+                            </div>
+
+                            <div class="flip-card-back">
+                                <h3>Top Holdings</h3>
+                                <ul class="flip-list">
+                                    <li><span>Apple (AAPL)</span> <strong>15%</strong></li>
+                                    <li><span>Microsoft (MSFT)</span> <strong>12%</strong></li>
+                                    <li><span>Tesla (TSLA)</span> <strong>8%</strong></li>
+                                </ul>
+                                <button class="btn-outline small-btn"
+                                    onclick="window.location.href='404page.html'">Manage Asset</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+
+                            <div class="flip-card-front">
+                                <div class="flip-icon">🏛️</div>
+                                <h3>Fixed Income</h3>
+                                <p class="amount">$1.2M</p>
+                                <p class="subtitle">30% of Total AUM</p>
+                            </div>
+
+                            <div class="flip-card-back">
+                                <h3>Top Holdings</h3>
+                                <ul class="flip-list">
+                                    <li><span>US Treasury</span> <strong>40%</strong></li>
+                                    <li><span>Corp Bonds</span> <strong>35%</strong></li>
+                                    <li><span>Muni Bonds</span> <strong>25%</strong></li>
+                                </ul>
+                                <button class="btn-outline small-btn"
+                                    onclick="window.location.href='404page.html'">Manage Asset</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+
+                            <div class="flip-card-front">
+                                <div class="flip-icon">🏢</div>
+                                <h3>Alternatives</h3>
+                                <p class="amount">$600K</p>
+                                <p class="subtitle">15% of Total AUM</p>
+                            </div>
+
+                            <div class="flip-card-back">
+                                <h3>Top Holdings</h3>
+                                <ul class="flip-list">
+                                    <li><span>Real Estate (REIT)</span> <strong>50%</strong></li>
+                                    <li><span>Crypto (BTC)</span> <strong>30%</strong></li>
+                                    <li><span>Gold ETF</span> <strong>20%</strong></li>
+                                </ul>
+                                <button class="btn-outline small-btn"
+                                    onclick="window.location.href='404page.html'">Manage Asset</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <h3 class="section-title" style="margin-top: 30px;">⚖️ Risk Profiles</h3>
+                <div class="card">
+                    <div class="risk-profiles-wrapper">
+                        <div class="risk-stat">
+                            <div class="risk-circle high-risk">15</div>
+                            <div class="risk-details">
+                                <h4>Aggressive</h4>
+                                <p>High risk, High reward clients</p>
+                            </div>
+                        </div>
+                        <div class="divider-vertical"></div>
+                        <div class="risk-stat">
+                            <div class="risk-circle mod-risk">84</div>
+                            <div class="risk-details">
+                                <h4>Moderate</h4>
+                                <p>Balanced portfolio clients</p>
+                            </div>
+                        </div>
+                        <div class="divider-vertical"></div>
+                        <div class="risk-stat">
+                            <div class="risk-circle low-risk">43</div>
+                            <div class="risk-details">
+                                <h4>Conservative</h4>
+                                <p>Capital preservation focus</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <h3 class="section-title" style="margin-top: 30px;">📝 Recent Allocations</h3>
+                <div class="card">
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <div class="activity-icon">✅</div>
+                            <div class="activity-text">
+                                <h4>Rebalanced David's Account</h4>
+                                <p>Sold 5% Equities, Bought 5% Bonds.</p>
+                            </div>
+                            <button class="btn-outline small-btn" onclick="window.location.href='404page.html'">View
+                                Log</button>
+                        </div>
+                        <hr class="divider">
+                        <div class="activity-item">
+                            <div class="activity-icon">⚠️</div>
+                            <div class="activity-text">
+                                <h4>Emma's Portfolio Drifted</h4>
+                                <p>Equities drifted +8% above target.</p>
+                            </div>
+                            <button class="btn-primary small-btn" onclick="window.location.href='404page.html'">Fix
+                                Drift</button>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+
+
+            <section id="view-appointments" class="view-section scroll-animate">
+
+
+                <div class="client-header">
+                    <h2>📅 Appointments & Scheduling</h2>
+                    <button class="btn-primary" onclick="window.location.href='404page.html'"><span
+                            class="icon">➕</span> Book New Meeting</button>
+                </div>
+
+
+                <h3 class="section-title">🚨 Next Upcoming Call</h3>
+                <div class="card featured-client-card" style="margin-bottom: 30px;">
+                    <img src="./asset/s3.webp" alt="Client" class="featured-img" loading="lazy">
+                    <div class="featured-content">
+                        <span class="dashboard-badge">Starts in 45 mins</span>
+                        <h3 class="featured-title">Quarterly Review with Sarah Jenkins</h3>
+                        <p class="featured-desc">
+                            <strong>Agenda:</strong> Reviewing Q2 performance, discussing tax-loss harvesting
+                            strategies, and adjusting asset allocation based on recent market volatility. Please review
+                            her latest risk profile and the pending KYC documents before joining the call.
+                        </p>
+                        <div class="featured-stats">
+                            <div class="f-stat"><span>Time</span><strong>10:30 AM (IST)</strong></div>
+                            <div class="f-stat"><span>Format</span><strong>Zoom Video</strong></div>
+                        </div>
+                        <div class="profile-action-btns" style="justify-content: flex-start; margin-top: 15px;">
+                            <button class="btn-primary" onclick="window.location.href='404page.html'">📹 Join Zoom
+                                Call</button>
+                            <button class="btn-outline" onclick="window.location.href='404page.html'">📝 View Prep
+                                Notes</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <h3 class="section-title">🗓️ Today's Itinerary</h3>
+                <div class="card" style="margin-bottom: 30px;">
+                    <div class="activity-list">
+
+                        <div class="appointment-item">
+                            <div class="time-block">
+                                <span class="time">02:00</span>
+                                <span class="ampm">PM</span>
+                            </div>
+                            <img src="./asset/w1.webp" class="list-avatar" alt="User" loading="lazy">
+                            <div class="appt-details">
+                                <h4 style="color: var(--text-white); font-size: 15px; margin-bottom: 3px;">David Miller
+                                    - Portfolio Onboarding</h4>
+                                <p style="color: var(--text-gray); font-size: 13px;">In-person meeting at Salem Branch
+                                    Office. Need to sign final trust documents.</p>
+                            </div>
+                            <button class="btn-outline small-btn" onclick="window.location.href='404page.html'">View
+                                Details</button>
+                        </div>
+                        <hr class="divider">
+
+                        <div class="appointment-item">
+                            <div class="time-block">
+                                <span class="time">04:30</span>
+                                <span class="ampm">PM</span>
+                            </div>
+                            <div class="avatar-circle small-avatar">E</div>
+                            <div class="appt-details">
+                                <h4 style="color: var(--text-white); font-size: 15px; margin-bottom: 3px;">Emma Watson -
+                                    Tax Planning</h4>
+                                <p style="color: var(--text-gray); font-size: 13px;">Phone Call. Discussing capital
+                                    gains and green energy ETF investments.</p>
+                            </div>
+                            <button class="btn-outline small-btn" onclick="window.location.href='404page.html'">View
+                                Details</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <h3 class="section-title">⏳ Pending Requests</h3>
+                <div class="cards-grid" style="margin-bottom: 30px;">
+
+
+                    <div class="card request-card">
+                        <div class="request-header">
+                            <img src="./asset/w2.webp" class="team-avatar" alt="Prospect" loading="lazy">
+                            <div>
+                                <h4 style="color: var(--text-white); font-size: 15px;">Michael Brown</h4>
+                                <p style="color: var(--aqua); font-size: 12px;">Prospective Client</p>
+                            </div>
+                        </div>
+                        <div class="request-body">
+                            <p><strong>Requested:</strong> Tomorrow, 11:00 AM</p>
+                            <p><strong>Topic:</strong> Wants to discuss wealth management services, fee structures, and
+                                retirement planning options.</p>
+                        </div>
+                        <div style="display: flex; gap: 10px; margin-top: 15px;">
+                            <button class="btn-primary full-width"
+                                onclick="window.location.href='404page.html'">Accept</button>
+                            <button class="btn-outline full-width"
+                                onclick="window.location.href='404page.html'">Decline</button>
+                        </div>
+                    </div>
+
+
+                    <div class="card request-card">
+                        <div class="request-header">
+                            <div class="avatar-circle team-avatar" style="width: 55px; height: 55px;">R</div>
+                            <div>
+                                <h4 style="color: var(--text-white); font-size: 15px;">Robert King</h4>
+                                <p style="color: var(--aqua); font-size: 12px;">Existing Client</p>
+                            </div>
+                        </div>
+                        <div class="request-body">
+                            <p><strong>Requested:</strong> Friday, 03:00 PM</p>
+                            <p><strong>Topic:</strong> Urgent review of recent stock market drop and potential portfolio
+                                rebalancing.</p>
+                        </div>
+                        <div style="display: flex; gap: 10px; margin-top: 15px;">
+                            <button class="btn-primary full-width"
+                                onclick="window.location.href='404page.html'">Accept</button>
+                            <button class="btn-outline full-width"
+                                onclick="window.location.href='404page.html'">Decline</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <h3 class="section-title">📂 Recent Meeting Summaries</h3>
+                <div class="card">
+                    <div class="summary-item">
+                        <div class="summary-header"
+                            style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                            <h4 style="color: var(--aqua); font-size: 16px;">Investment Strategy - John Doe</h4>
+                            <span class="activity-time">Yesterday</span>
+                        </div>
+                        <p style="color: var(--text-gray); font-size: 13px; line-height: 1.6;">
+                            Discussed shifting 10% of the portfolio from fixed income to equities due to favorable
+                            market conditions in the tech sector. Client agreed to the new risk profile. Next steps
+                            involve executing the trades by end of week and updating the compliance logs.
+                        </p>
+                        <button class="btn-outline small-btn" style="margin-top: 15px;"
+                            onclick="window.location.href='404page.html'">📄 Download PDF Log</button>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <section id="view-settings" class="view-section scroll-animate">
+
+                <div class="client-header">
+                    <h2>⚙️ Workspace Settings</h2>
+                </div>
+
+
+                <h3 class="section-title">🪪 Digital Profile ID</h3>
+                <div class="card digital-id-card" style="margin-bottom: 30px;">
+                    <div class="id-banner">
+
+                        <img src="./asset/q18.webp" alt="Banner" class="id-banner-img">
+                    </div>
+                    <div class="id-content">
+
+                        <img src="./asset/s2.webp" alt="Profile" class="id-avatar" loading="lazy">
+
+                        <div class="id-details">
+                            <h3>Advisor Name</h3>
+                            <p class="role">Senior Wealth Advisor</p>
+                            <p class="contact">Salem Branch • ID: ADV-2026</p>
+                        </div>
+
+                        <div class="id-qr">
+
+                            <img src="./asset/q40.webp" alt="QR Code" class="qr-img">
+                            <p>Scan to Share</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <h3 class="section-title">🔗 Connected Integrations</h3>
+                <div class="cards-grid" style="margin-bottom: 30px;">
+
+
+                    <div class="card integration-card">
+                        <div class="integration-icon">📹</div>
+                        <div class="integration-info">
+                            <h4>Zoom Meetings</h4>
+                            <p class="status connected">🟢 Active</p>
+                        </div>
+                        <button class="btn-outline small-btn"
+                            onclick="window.location.href='404page.html'">Manage</button>
+                    </div>
+
+
+                    <div class="card integration-card">
+                        <div class="integration-icon">📅</div>
+                        <div class="integration-info">
+                            <h4>Google Calendar</h4>
+                            <p class="status connected">🟢 Synced</p>
+                        </div>
+                        <button class="btn-outline small-btn"
+                            onclick="window.location.href='404page.html'">Manage</button>
+                    </div>
+
+
+                    <div class="card integration-card">
+                        <div class="integration-icon">💬</div>
+                        <div class="integration-info">
+                            <h4>Slack Workspace</h4>
+                            <p class="status disconnected">⚪ Disconnected</p>
+                        </div>
+                        <button class="btn-primary small-btn" onclick="window.location.href='404page.html'">Link
+                            Account</button>
+                    </div>
+
+                </div>
+
+
+                <h3 class="section-title">💎 Subscription Plan</h3>
+                <div class="card plan-card" style="margin-bottom: 30px;">
+                    <div class="plan-visual">
+                        <span class="plan-icon">👑</span>
+                    </div>
+                    <div class="plan-details">
+                        <h3>InvestPro Elite Tier</h3>
+                        <p>You have access to all premium features, unlimited client portfolios, and priority AI
+                            insights.</p>
+                        <div class="plan-tags">
+                            <span class="tag">Unlimited Clients</span>
+                            <span class="tag">Advanced Analytics</span>
+                        </div>
+                    </div>
+                    <button class="btn-primary" onclick="window.location.href='404page.html'">View Billing
+                        Options</button>
+                </div>
+
+
+                <h3 class="section-title">📱 Active Sessions</h3>
+                <div class="card">
+                    <div class="device-item">
+                        <div class="device-img-wrapper">💻</div>
+                        <div class="device-info">
+                            <h4>MacBook Pro 16"</h4>
+                            <p style="color: var(--aqua); font-weight: bold; font-size: 11px;">Current Session • Web
+                                Browser</p>
+                        </div>
+                        <button class="btn-outline small-btn" onclick="window.location.href='404page.html'"
+                            style="border-color: #ef4444; color: #ef4444;">Log
+                            Out</button>
+                    </div>
+
+                    <hr class="divider">
+
+                    <div class="device-item">
+                        <div class="device-img-wrapper">📱</div>
+                        <div class="device-info">
+                            <h4>iPhone 15 Pro</h4>
+                            <p style="color: var(--text-gray); font-size: 11px;">Active 2 hours ago • Mobile App</p>
+                        </div>
+                        <button class="btn-outline small-btn" onclick="window.location.href='404page.html'"
+                            style="border-color: #ef4444; color: #ef4444;">Log
+                            Out</button>
+                    </div>
+                </div>
+
+            </section>
+
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+
+
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+
+            const preloader = document.getElementById("preloader");
+            const mainContent = document.getElementById("mainContent");
+
+
+            window.addEventListener("load", () => {
+                setTimeout(() => {
+                    preloader.style.opacity = "0";
+                    preloader.style.visibility = "hidden";
+
+                    mainContent.classList.remove("app-hidden");
+                    mainContent.classList.add("app-visible");
+                }, 1500);
+            });
+
+        });
+        document.addEventListener('DOMContentLoaded', () => {
+
+            let userEmail = localStorage.getItem('userEmail') || "advisor_demo@finance.com";
+
+
+            let rawName = userEmail.split('@')[0];
+            let formattedName = rawName.replace(/[._]/g, ' ');
+            let username = formattedName.charAt(0).toUpperCase() + formattedName.slice(1);
+
+
+            let headerNameEl = document.getElementById('headerName');
+            if (headerNameEl) {
+                headerNameEl.innerText = `Hi, ${username} 👋`;
+            }
+
+
+            let fallbackAvatar = document.getElementById('avatarFallback');
+            if (fallbackAvatar) {
+                fallbackAvatar.innerText = username.charAt(0).toUpperCase();
+            }
+
+
+            initScrollAnimations();
+        });
+
+
+        function switchView(viewId, element) {
+            document.querySelectorAll('.view-section').forEach(view => {
+                view.classList.remove('active', 'show');
+            });
+
+            let targetView = document.getElementById(viewId);
+            if (targetView) {
+                targetView.classList.add('active');
+                setTimeout(() => targetView.classList.add('show'), 50);
+            }
+
+            document.querySelectorAll('.nav-item').forEach(nav => nav.classList.remove('active'));
+            element.classList.add('active');
+
+
+            if (window.innerWidth <= 768) {
+                document.getElementById('sidebar').classList.remove('active');
+            }
+        }
+
+
+        const menuToggle = document.getElementById('menuToggle');
+        const sidebar = document.getElementById('sidebar');
+
+        if (menuToggle && sidebar) {
+            menuToggle.addEventListener('click', () => {
+                sidebar.classList.toggle('active');
+            });
+
+            document.addEventListener('click', (e) => {
+                if (window.innerWidth <= 768 && !sidebar.contains(e.target) && e.target !== menuToggle) {
+                    sidebar.classList.remove('active');
+                }
+            });
+        }
+
+
+        function initScrollAnimations() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.scroll-animate').forEach((el) => {
+                observer.observe(el);
+                if (el.classList.contains('active')) {
+                    setTimeout(() => el.classList.add('show'), 100);
+                }
+            });
+        }
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+
+
+
+            const ctx = document.getElementById('mainDashboardChart');
+            if (ctx) {
+                new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+                        datasets: [{
+                            label: 'AUM Growth ($)',
+                            data: [3.2, 3.5, 3.4, 3.8, 3.9, 4.0, 4.2],
+                            borderColor: '#00e5ff',
+                            backgroundColor: 'rgba(0, 229, 255, 0.1)',
+                            borderWidth: 2,
+                            fill: true,
+                            tension: 0.4, // smooth curves
+                            pointBackgroundColor: '#00e5ff',
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: { display: false } // Hide top legend
+                        },
+                        scales: {
+                            x: {
+                                grid: { display: false, color: 'rgba(255, 255, 255, 0.1)' },
+                                ticks: { color: '#a8b2d1' }
+                            },
+                            y: {
+                                grid: { color: 'rgba(0, 229, 255, 0.1)' },
+                                ticks: { color: '#a8b2d1', callback: function (value) { return value + 'M'; } }
+                            }
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

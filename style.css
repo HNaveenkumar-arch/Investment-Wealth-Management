@@ -1,6 +1,3 @@
-/* =========================================
-   HERO SECTION STYLES (Split Glassmorphism)
-   ========================================= */
 .hero-section {
   position: relative;
   min-height: 100vh;
@@ -9,10 +6,9 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  padding: 120px 5% 50px 5%;  
+  padding: 120px 5% 50px 5%;
 }
 
- 
 .hero-video {
   position: absolute;
   top: 0;
@@ -29,7 +25,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-   
+
   background: linear-gradient(
     90deg,
     rgba(5, 16, 36, 0.95) 0%,
@@ -51,7 +47,6 @@
   z-index: -2;
 }
 
- 
 .glow-circle {
   position: absolute;
   border-radius: 50%;
@@ -75,7 +70,6 @@
   animation: float 8s infinite ease-in-out reverse;
 }
 
- 
 .hero-container {
   display: flex;
   align-items: center;
@@ -86,7 +80,6 @@
   z-index: 1;
 }
 
- 
 .hero-content-left {
   flex: 1;
   max-width: 600px;
@@ -153,7 +146,6 @@
   color: var(--aqua);
 }
 
- 
 .hero-content-right {
   flex: 1;
   position: relative;
@@ -201,16 +193,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 15px;  
+  padding: 15px;
   overflow: hidden;
 }
 
 .dash-image {
   width: 100%;
   height: 100%;
-  object-fit: cover;  
-  border-radius: 12px;  
-  opacity: 0.85;  
+  object-fit: cover;
+  border-radius: 12px;
+  opacity: 0.85;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   transition: transform 0.4s ease;
 }
@@ -219,10 +211,9 @@
   color: rgba(0, 229, 255, 0.1);
 }
 .glass-dashboard:hover .dash-image {
-  transform: scale(1.03);  
+  transform: scale(1.03);
 }
 
- 
 .float-card {
   position: absolute;
   display: flex;
@@ -273,7 +264,6 @@
   margin: 0;
 }
 
- 
 .card-1 {
   top: -20px;
   right: -30px;
@@ -290,7 +280,6 @@
   animation-delay: 3s;
 }
 
- 
 @keyframes float {
   0%,
   100% {
@@ -311,7 +300,6 @@
   }
 }
 
- 
 @media (max-width: 1024px) {
   .hero-container {
     flex-direction: column;
@@ -360,7 +348,6 @@
   }
 }
 
- 
 @media (max-width: 480px) {
   .float-card {
     padding: 10px 12px;
@@ -379,10 +366,6 @@
   }
 }
 
-/* =========================================
-   Section 2: Live Market Ticker Styles
-   ========================================= */
-
 .market-ticker-section {
   width: 100%;
   background-color: var(--navy-deep);
@@ -392,10 +375,9 @@
   align-items: center;
 }
 
- 
 .ticker-glass-container {
   width: 100%;
-  background: rgba(10, 25, 47, 0.4);  
+  background: rgba(10, 25, 47, 0.4);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-top: 1px solid var(--border-color);
@@ -406,21 +388,18 @@
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
 }
 
- 
 .ticker-track {
   display: flex;
-  gap: 50px;  
-   
+  gap: 50px;
+
   width: max-content;
   animation: tickerScroll 20s linear infinite;
 }
 
- 
 .ticker-glass-container:hover .ticker-track {
   animation-play-state: paused;
 }
 
- 
 .ticker-item {
   display: flex;
   align-items: center;
@@ -435,19 +414,17 @@
   white-space: nowrap;
 }
 
- 
 .ticker-item:hover {
   color: var(--text-white);
-  background: rgba(0, 229, 255, 0.05);  
+  background: rgba(0, 229, 255, 0.05);
   box-shadow: 0 0 15px var(--border-color);
   transform: translateY(-3px);
 }
 
 .ticker-item span:first-child {
-  font-size: 1.3rem;  
+  font-size: 1.3rem;
 }
 
- 
 .ticker-item .highlight-up {
   color: var(--aqua);
 }
@@ -458,23 +435,18 @@
 
 .ticker-item:hover .highlight-up {
   color: var(--aqua-hover);
-  text-shadow: 0 0 8px rgba(0, 229, 255, 0.5);  
+  text-shadow: 0 0 8px rgba(0, 229, 255, 0.5);
 }
 
- 
 @keyframes tickerScroll {
   0% {
     transform: translateX(0);
   }
   100% {
-     
     transform: translateX(calc(-50% - 25px));
   }
 }
 
-/* =========================================
-   Mobile Responsiveness
-   ========================================= */
 @media screen and (max-width: 768px) {
   .market-ticker-section {
     padding: 20px 0;
@@ -496,7 +468,7 @@
 
   .ticker-track {
     gap: 30px;
-     
+
     animation: tickerScrollMobile 15s linear infinite;
   }
 
@@ -509,10 +481,6 @@
     }
   }
 }
-
-/* =========================================
-   Section 3: Wealth Solutions Styles
-   ========================================= */
 
 .wealth-solutions-section {
   padding: 80px 5%;
@@ -543,36 +511,30 @@
   line-height: 1.6;
 }
 
- 
 .honeycomb-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   max-width: 1200px;
   margin: 0 auto;
-  padding-bottom: 60px;  
+  padding-bottom: 60px;
 }
 
- 
 .glass-card:nth-child(3n-1) {
-  transform: translateY(60px);
+  transform: translateY(10px);
 }
 
- 
 .glass-card {
   position: relative;
   border-radius: 16px;
-   
+
   padding: 2px;
   overflow: hidden;
-  transition:
-    transform 0.4s ease,
-    box-shadow 0.4s ease;
+  transition: all 0.4s ease;
   background: rgba(10, 25, 47, 0.4);
   z-index: 100;
 }
 
- 
 .glass-card::before {
   content: "";
   position: absolute;
@@ -582,41 +544,34 @@
   height: 200%;
   background: conic-gradient(transparent, #02f5fd4b, transparent 30%);
   animation: borderRotate 4s linear infinite;
-  opacity: 0.6;  
+  opacity: 0.6;
   transition: opacity 0.3s ease;
   z-index: -1;
 }
 
- 
 .card-inner {
   position: relative;
-  background: var(
-    --navy-light
-  );  
+  background: var(--navy-light);
   border-radius: 14px;
   height: 100%;
   display: flex;
   flex-direction: column;
   z-index: 1;
-   
+
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }
 
- 
 .glass-card:hover {
-  transform: translateY(
-    -10px
-  ) !important;  
+  transform: translateY(-10px) !important;
   box-shadow: 0 10px 30px rgba(0, 229, 255, 0.2);
 }
 
 .glass-card:hover::before {
-  opacity: 1;  
-  animation-duration: 2s;  
+  opacity: 1;
+  animation-duration: 2s;
 }
 
- 
 .card-image {
   width: 100%;
   height: 180px;
@@ -635,7 +590,6 @@
   transform: scale(1.1);
 }
 
- 
 .card-content {
   padding: 15px;
   display: flex;
@@ -643,22 +597,20 @@
   flex-grow: 1;
 }
 
- 
- 
 .gradient-icon {
   font-size: 2.5rem;
   margin-bottom: 15px;
   display: inline-block;
-   
-  filter: drop-shadow(0 0 8px rgba(0, 229, 255, 0.4));  
+
+  filter: drop-shadow(0 0 8px rgba(0, 229, 255, 0.4));
   transition:
     filter 0.3s ease,
     transform 0.3s ease;
 }
 
 .glass-card:hover .gradient-icon {
-  filter: drop-shadow(0 0 15px rgba(0, 229, 255, 0.9));  
-  transform: scale(1.1);  
+  filter: drop-shadow(0 0 15px rgba(0, 229, 255, 0.9));
+  transform: scale(1.1);
 }
 
 .card-content h3 {
@@ -672,10 +624,9 @@
   font-size: 0.95rem;
   line-height: 1.6;
   margin-bottom: 25px;
-  flex-grow: 1;  
+  flex-grow: 1;
 }
 
- 
 .aqua-btn {
   display: inline-flex;
   align-items: center;
@@ -701,7 +652,6 @@
   transform: translateX(5px);
 }
 
- 
 @keyframes borderRotate {
   0% {
     transform: rotate(0deg);
@@ -711,7 +661,6 @@
   }
 }
 
- 
 .fade-up {
   opacity: 0;
   animation: fadeUpAnim 0.8s forwards ease-out;
@@ -730,20 +679,15 @@
   }
   100% {
     opacity: 1;
-    /* If it's a staggered card, it will override this in the final state via layout, 
-       but for pure CSS scrolling, this works cleanly */
     transform: translateY(0);
   }
 }
 
-/* =========================================
-   Mobile Responsiveness
-   ========================================= */
 @media screen and (max-width: 992px) {
   .honeycomb-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-   
+
   .glass-card:nth-child(3n-1) {
     transform: none;
   }
@@ -767,7 +711,7 @@
     gap: 25px;
     padding-bottom: 0;
   }
-   
+
   .glass-card:nth-child(n) {
     transform: none !important;
   }
@@ -776,13 +720,9 @@
   }
 }
 
-/* =========================================
-   Section 4: Wealth Journey Styles
-   ========================================= */
-
 .wealth-journey-section {
   padding: 80px 5%;
-  background-color: var(--navy-deep);  
+  background-color: var(--navy-deep);
   overflow: hidden;
 }
 
@@ -793,7 +733,6 @@
   padding: 40px 0;
 }
 
- 
 .center-line {
   position: absolute;
   top: 0;
@@ -803,11 +742,10 @@
   background: rgba(0, 229, 255, 0.2);
   transform: translateX(-50%);
   border-radius: 2px;
-   
+
   box-shadow: 0 0 15px rgba(0, 229, 255, 0.3);
 }
 
- 
 .journey-step {
   position: relative;
   width: 50%;
@@ -831,7 +769,6 @@
   text-align: left;
 }
 
- 
 .step-dot {
   position: absolute;
   top: 20px;
@@ -852,14 +789,13 @@
 }
 
 .journey-step.left .step-dot {
-  right: -20px;  
+  right: -20px;
 }
 
 .journey-step.right .step-dot {
-  left: -20px;  
+  left: -20px;
 }
 
- 
 .journey-card {
   padding: 30px;
   background: rgba(10, 25, 47, 0.6);
@@ -875,7 +811,7 @@
 }
 
 .journey-step.left .journey-card {
-  border-right-width: 4px;  
+  border-right-width: 4px;
   border-right-color: var(--aqua);
 }
 
@@ -898,7 +834,6 @@
   z-index: 100;
 }
 
- 
 .aqua-btn-outline {
   display: inline-flex;
   align-items: center;
@@ -919,9 +854,8 @@
   transition: transform 0.3s ease;
 }
 
- 
 .journey-step:hover .journey-card {
-  transform: translateY(-5px);
+  transform: translateY(-1px);
   box-shadow: 0 10px 30px rgba(0, 229, 255, 0.068);
   border-color: var(--aqua);
 }
@@ -942,7 +876,6 @@
   transform: translateX(5px);
 }
 
- 
 .reveal {
   opacity: 0;
   transform: translateY(50px);
@@ -954,12 +887,9 @@
   transform: translateY(0);
 }
 
-/* =========================================
-   Mobile Responsiveness
-   ========================================= */
 @media screen and (max-width: 768px) {
   .center-line {
-    left: 20px;  
+    left: 20px;
     transform: none;
   }
 
@@ -968,23 +898,20 @@
     margin-bottom: 40px;
   }
 
-   
   .journey-step.left,
   .journey-step.right {
     left: 0;
-    padding-left: 60px;  
+    padding-left: 60px;
     padding-right: 0;
-    text-align: left;  
+    text-align: left;
   }
 
-   
   .journey-step.left .step-dot,
   .journey-step.right .step-dot {
     left: 0;
     right: auto;
   }
 
-   
   .journey-step.left .journey-card,
   .journey-step.right .journey-card {
     border-left-width: 4px;
@@ -994,16 +921,11 @@
   }
 }
 
-/* =========================================
-   Section 6: Dashboard Styles (100% Overlap Fixed)
-   ========================================= */
-
 :root {
   --neon-green: #00ff88;
   --neon-red: #ff3366;
 }
 
- 
 .performance-dashboard-section * {
   box-sizing: border-box;
 }
@@ -1030,12 +952,11 @@
   flex-direction: column;
 }
 
- 
 .dashboard-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 40px;  
-  margin-bottom: 70px;  
+  gap: 40px;
+  margin-bottom: 70px;
   width: 100%;
 }
 
@@ -1043,18 +964,15 @@
   margin-bottom: 0;
 }
 
- 
 .glass-card {
   background: rgba(2, 12, 27, 0.6);
   border: 1px solid rgba(0, 229, 255, 0.1);
   border-radius: 12px;
-  padding: 20px;  
-  transition:
-    border-color 0.3s ease,
-    box-shadow 0.3s ease;
+  padding: 20px;
+  transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
-  height: auto;  
+  height: auto;
 }
 
 .glass-card:hover {
@@ -1062,7 +980,6 @@
   box-shadow: 0 0 20px rgba(0, 229, 255, 0.1);
 }
 
- 
 .profit-cards-row {
   display: flex;
   flex-wrap: wrap;
@@ -1070,8 +987,8 @@
 }
 
 .profit-card {
-  flex: 1 1 30%;  
-  min-width: 260px;  
+  flex: 1 1 30%;
+  min-width: 260px;
 }
 
 .card-label {
@@ -1085,7 +1002,7 @@
 .card-value {
   font-size: 2.2rem;
   color: var(--text-white);
-  margin-bottom: 15px;  
+  margin-bottom: 15px;
   font-weight: 700;
   line-height: 1.2;
 }
@@ -1108,7 +1025,6 @@
   color: var(--neon-green);
 }
 
- 
 .chart-main {
   flex: 1 1 60%;
   min-width: 260px;
@@ -1158,7 +1074,6 @@
   }
 }
 
- 
 .chart-image-container,
 .donut-image-container {
   width: 100%;
@@ -1202,7 +1117,6 @@
   margin-top: 15px;
 }
 
- 
 .allocation-list {
   list-style: none;
   padding: 0;
@@ -1238,7 +1152,6 @@
   background: var(--neon-green);
 }
 
- 
 .risk-meter-card {
   flex: 1 1 55%;
   min-width: 300px;
@@ -1248,7 +1161,6 @@
   min-width: 300px;
 }
 
- 
 .risk-bar-container {
   margin: 20px 0 30px;
 }
@@ -1276,7 +1188,6 @@
   filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
 }
 
- 
 .table-responsive {
   width: 100%;
   overflow-x: auto;
@@ -1308,7 +1219,6 @@
   font-weight: bold;
 }
 
- 
 .dashboard-cta {
   text-align: center;
   margin-top: 50px;
@@ -1349,9 +1259,6 @@
   }
 }
 
-/* =========================================
-   Mobile Responsiveness
-   ========================================= */
 @media screen and (max-width: 1024px) {
   .dashboard-glass-panel {
     padding: 30px;
@@ -1377,10 +1284,6 @@
   }
 }
 
-/* =========================================
-   Section 7: Wealth Calculator Styles
-   ========================================= */
-
 .wealth-calculator-section {
   padding: 100px 5%;
   background-color: var(--navy-dark);
@@ -1396,7 +1299,6 @@
   align-items: center;
 }
 
- 
 .calc-left-panel {
   flex: 1 1 50%;
   min-width: 300px;
@@ -1419,7 +1321,6 @@
   margin-bottom: 25px;
 }
 
- 
 .calc-image-wrapper {
   width: 100%;
   height: 200px;
@@ -1433,7 +1334,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: sepia(1) hue-rotate(180deg) saturate(2) brightness(0.7);  
+  filter: sepia(1) hue-rotate(180deg) saturate(2) brightness(0.7);
   transition: transform 0.5s ease;
 }
 
@@ -1448,7 +1349,6 @@
   margin-bottom: 30px;
 }
 
- 
 .sliders-container {
   background: rgba(10, 25, 47, 0.5);
   padding: 25px;
@@ -1484,7 +1384,6 @@
   border-radius: 6px;
 }
 
- 
 .aqua-slider {
   -webkit-appearance: none;
   width: 100%;
@@ -1510,7 +1409,6 @@
   transform: scale(1.2);
 }
 
- 
 .calc-right-panel {
   flex: 1 1 40%;
   min-width: 300px;
@@ -1561,7 +1459,6 @@
   font-size: 2rem;
 }
 
- 
 .highlight-box {
   background: rgba(0, 229, 255, 0.05);
   padding: 30px;
@@ -1610,7 +1507,6 @@
   font-style: italic;
 }
 
- 
 .full-width-btn {
   display: block;
   text-align: center;
@@ -1619,7 +1515,6 @@
   font-size: 1.1rem;
 }
 
- 
 .solid-hover-btn.full-width-btn {
   display: block;
   text-align: center;
@@ -1627,7 +1522,7 @@
   padding: 15px 0;
   font-size: 1.1rem;
   background-color: var(--aqua);
-  color: var(--navy-deep);  
+  color: var(--navy-deep);
   text-decoration: none;
   font-weight: bold;
   border-radius: 8px;
@@ -1639,14 +1534,11 @@
 
 .solid-hover-btn.full-width-btn:hover {
   background-color: transparent;
-  color: var(--aqua);  
+  color: var(--aqua);
   box-shadow: 0 0 25px rgba(0, 229, 255, 0.6);
   transform: translateY(-3px);
 }
 
-/* =========================================
-   Mobile Responsiveness
-   ========================================= */
 @media screen and (max-width: 992px) {
   .calculator-container {
     flex-direction: column;
@@ -1677,36 +1569,30 @@
   }
 }
 
-/* =========================================
-   Section 8: Success Stories Styles
-   ========================================= */
-
 .success-stories-section {
-  padding: 100px 0;  
+  padding: 100px 0;
   position: relative;
   background-color: var(--navy-deep);
   overflow: hidden;
 }
 
- 
 .stories-bg-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-   
-  background-image: url("https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&q=80&w=1920");
+
+  background-image: url("./asset/q16.webp");
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;  
-   
+  background-attachment: fixed;
+
   filter: blur(8px);
-  opacity: 0.15;  
+  opacity: 0.15;
   z-index: 0;
 }
 
- 
 .success-stories-section .section-header,
 .success-stories-section .carousel-container {
   position: relative;
@@ -1717,7 +1603,6 @@
   padding: 0 5%;
 }
 
- 
 .carousel-container {
   display: flex;
   justify-content: center;
@@ -1728,7 +1613,6 @@
   padding: 20px 5%;
 }
 
- 
 .story-card {
   position: relative;
   background: rgba(10, 25, 47, 0.7);
@@ -1745,7 +1629,6 @@
   flex-direction: column;
 }
 
- 
 .client-image {
   position: absolute;
   top: -45px;
@@ -1768,15 +1651,13 @@
   object-fit: cover;
 }
 
- 
 .stars {
-  color: #ffc107;  
+  color: #ffc107;
   font-size: 1.1rem;
   margin-bottom: 20px;
   text-shadow: 0 0 10px rgba(255, 193, 7, 0.4);
 }
 
- 
 .quote {
   color: var(--text-gray);
   font-size: 1rem;
@@ -1786,7 +1667,6 @@
   flex-grow: 1;
 }
 
- 
 .client-info h4 {
   color: var(--text-white);
   font-size: 1.2rem;
@@ -1800,9 +1680,8 @@
   letter-spacing: 1px;
 }
 
- 
 .center-card {
-  transform: scale(1.1);  
+  transform: scale(1.1);
   z-index: 3;
   border-color: var(--aqua);
   box-shadow:
@@ -1812,22 +1691,18 @@
 }
 
 .side-card {
-  transform: scale(0.9);  
+  transform: scale(0.9);
   z-index: 1;
-  opacity: 0.5;  
-  filter: blur(2px);  
+  opacity: 0.5;
+  filter: blur(2px);
 }
 
- 
 .side-card:hover {
   opacity: 0.8;
   filter: blur(0px);
   cursor: pointer;
 }
 
-/* =========================================
-   Mobile Responsiveness (Swipeable Carousel)
-   ========================================= */
 @media screen and (max-width: 1024px) {
   .carousel-container {
     gap: 15px;
@@ -1843,36 +1718,30 @@
   }
 
   .carousel-container {
-     
     justify-content: flex-start;
     overflow-x: auto;
     overflow-y: visible;
-    scroll-snap-type: x mandatory;  
-    padding: 60px 5% 30px;  
+    scroll-snap-type: x mandatory;
+    padding: 60px 5% 30px;
     margin-top: 20px;
     -webkit-overflow-scrolling: touch;
   }
 
-   
   .carousel-container::-webkit-scrollbar {
     display: none;
   }
 
   .story-card {
-    width: 85vw;  
+    width: 85vw;
     max-width: 350px;
-    scroll-snap-align: center;  
-     
+    scroll-snap-align: center;
+
     transform: scale(1) !important;
     opacity: 1 !important;
     filter: none !important;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   }
 }
-
-/* =========================================
-   Section 8: Success Stories Styles (Vertical Mobile)
-   ========================================= */
 
 .success-stories-section {
   padding: 100px 0;
@@ -1881,21 +1750,19 @@
   overflow: hidden;
 }
 
- 
 .stories-bg-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&q=80&w=1920");
+  background-image: url("./asset/q16.webp");
   background-size: cover;
   filter: blur(8px);
   opacity: 0.15;
   z-index: 0;
 }
 
- 
 .carousel-container {
   display: flex;
   justify-content: center;
@@ -1919,23 +1786,21 @@
   transition: all 0.5s ease;
 }
 
- 
 @media screen and (max-width: 768px) {
   .carousel-container {
-    flex-direction: column;  
-    gap: 60px;  
+    flex-direction: column;
+    gap: 60px;
     padding: 40px 5%;
   }
 
   .story-card {
-    width: 100%;  
+    width: 100%;
     max-width: 400px;
-    transform: scale(1) !important;  
+    transform: scale(1) !important;
     opacity: 1 !important;
     filter: none !important;
   }
 
-   
   .nav-btn {
     display: none !important;
   }
@@ -2076,7 +1941,6 @@
   }
 }
 
-
 .market-insights {
   padding: 100px 8%;
   background: linear-gradient(180deg, var(--navy-dark), var(--navy-deep));
@@ -2166,8 +2030,7 @@
 
 .category1 {
   position: absolute;
-   
-   
+
   background: var(--aqua);
   color: var(--navy-dark);
   padding: 8px 18px;
@@ -2266,10 +2129,6 @@
   color: var(--aqua-hover);
 }
 
-/*==================
-Scroll Animation
-==================*/
-
 .scroll-reveal {
   opacity: 0;
   transform: translateY(70px);
@@ -2281,10 +2140,6 @@ Scroll Animation
   transform: translateY(0);
 }
 
-/*==================
-Tablet
-==================*/
-
 @media (max-width: 992px) {
   .insights-grid {
     grid-template-columns: 1fr;
@@ -2294,10 +2149,6 @@ Tablet
     height: 350px;
   }
 }
-
-/*==================
-Mobile
-==================*/
 
 @media (max-width: 768px) {
   .market-insights {
@@ -2329,10 +2180,6 @@ Mobile
   }
 }
 
-/*==================
-Small Mobile
-==================*/
-
 @media (max-width: 480px) {
   .section-title h2 {
     font-size: 28px;
@@ -2352,7 +2199,6 @@ Small Mobile
   }
 }
 
- 
 :root {
   --navy-dark: #051024;
   --navy-light: #0a192f;
@@ -2374,12 +2220,11 @@ Small Mobile
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  align-items: center;  
+  align-items: center;
   justify-content: space-between;
   gap: 50px;
 }
 
- 
 .awards-left {
   flex: 1;
   display: flex;
@@ -2402,7 +2247,7 @@ Small Mobile
 
 .awards-img {
   width: 100%;
-  max-width: 450px;  
+  max-width: 450px;
   border-radius: 10px;
   border: 1px solid var(--border-color);
   box-shadow: 0 10px 30px rgba(0, 229, 255, 0.05);
@@ -2427,7 +2272,6 @@ Small Mobile
   box-shadow: 0 0 15px var(--border-color);
 }
 
- 
 .awards-right {
   flex: 1.2;
   display: grid;
@@ -2480,7 +2324,6 @@ Small Mobile
   margin: 0;
 }
 
- 
 @media screen and (max-width: 992px) {
   .awards-container {
     flex-direction: column;
@@ -2499,11 +2342,10 @@ Small Mobile
 
 @media screen and (max-width: 600px) {
   .awards-right {
-    grid-template-columns: 1fr;  
+    grid-template-columns: 1fr;
   }
 }
 
- 
 :root {
   --navy-dark: #051024;
   --navy-light: #0a192f;
@@ -2515,9 +2357,6 @@ Small Mobile
   --border-color: rgba(0, 229, 255, 0.2);
 }
 
- 
- 
- 
 .premium-cta {
   position: relative;
   padding: 100px 5%;
@@ -2535,7 +2374,6 @@ Small Mobile
   z-index: 1;
 }
 
- 
 .cta-heading-container {
   text-align: center;
   margin-bottom: 50px;
@@ -2559,9 +2397,8 @@ Small Mobile
   border-radius: 2px;
 }
 
- 
 .cta-card {
-  background: rgba(10, 25, 47, 0.7);  
+  background: rgba(10, 25, 47, 0.7);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--border-color);
@@ -2601,7 +2438,6 @@ Small Mobile
   margin-right: auto;
 }
 
- 
 .cta-buttons-container {
   display: flex;
   gap: 25px;
@@ -2644,9 +2480,6 @@ Small Mobile
   box-shadow: 0 8px 25px rgba(0, 229, 255, 0.3);
 }
 
- 
- 
- 
 .premium-cta::before {
   content: "";
   position: absolute;
@@ -2672,7 +2505,7 @@ Small Mobile
 
 .particles-container span {
   position: absolute;
-  background-color: rgba(255, 215, 0, 0.4);  
+  background-color: rgba(255, 215, 0, 0.4);
   border-radius: 50%;
   animation: particleDrift linear infinite;
 }
@@ -2739,9 +2572,6 @@ Small Mobile
   }
 }
 
- 
- 
- 
 @media screen and (max-width: 992px) {
   .cta-card {
     padding: 50px 30px;

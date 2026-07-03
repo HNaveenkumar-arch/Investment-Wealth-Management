@@ -13,7 +13,6 @@
 
     <style>
         :root {
-             
             --navy-dark: #051024;
             --navy-light: #0a192f;
             --navy-deep: #020c1b;
@@ -33,6 +32,9 @@
         }
 
         body {
+
+            background: linear-gradient(rgba(2, 12, 27, 0.75), rgba(2, 12, 27, 0.85)),
+                url('./asset/q1.webp') center/cover no-repeat fixed;
             background-color: var(--navy-deep);
             display: flex;
             justify-content: center;
@@ -43,7 +45,88 @@
             min-height: 100vh;
         }
 
-         
+        .preloader-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--navy-deep);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition:
+                opacity 0.6s ease,
+                visibility 0.6s ease;
+        }
+
+        .preloader-content {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .aqua-ring {
+            position: absolute;
+            top: -30px;
+            width: 100px;
+            height: 100px;
+            border: 2px solid transparent;
+            border-top-color: var(--aqua);
+            border-right-color: var(--aqua);
+            border-radius: 50%;
+            animation: spin 1.2s linear infinite;
+        }
+
+        .preloader-icon {
+            font-size: 2.5rem;
+            color: var(--aqua);
+            margin-bottom: 40px;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .preloader-text {
+            font-family: "Orbitron", sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-white);
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+        }
+
+        .preloader-subtext {
+            font-size: 0.8rem;
+            color: var(--aqua);
+            letter-spacing: 1px;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            50% {
+                transform: scale(1.1);
+                opacity: 0.7;
+            }
+        }
+
+
         .back-home-btn {
             position: fixed;
             top: 30px;
@@ -65,7 +148,7 @@
             opacity: 0;
             transform: translateY(-20px);
             animation: fadeDown 0.8s ease-out forwards;
-            animation-delay: 1s;
+            animation-delay: 0.5s;
         }
 
         .back-home-btn:hover {
@@ -87,120 +170,6 @@
             }
         }
 
-         
-        .background-shapes {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            z-index: 0;
-        }
-
-        .background-shapes li {
-            position: absolute;
-            display: block;
-            list-style: none;
-            width: 20px;
-            height: 20px;
-            background: rgba(0, 229, 255, 0.05);
-            border: 1px solid var(--border-color);
-            animation: floatUp 25s linear infinite;
-            bottom: -150px;
-            border-radius: 4px;
-        }
-
-        .background-shapes li:nth-child(1) {
-            left: 25%;
-            width: 80px;
-            height: 80px;
-            animation-delay: 0s;
-        }
-
-        .background-shapes li:nth-child(2) {
-            left: 10%;
-            width: 20px;
-            height: 20px;
-            animation-delay: 2s;
-            animation-duration: 12s;
-        }
-
-        .background-shapes li:nth-child(3) {
-            left: 70%;
-            width: 20px;
-            height: 20px;
-            animation-delay: 4s;
-        }
-
-        .background-shapes li:nth-child(4) {
-            left: 40%;
-            width: 60px;
-            height: 60px;
-            animation-delay: 0s;
-            animation-duration: 18s;
-        }
-
-        .background-shapes li:nth-child(5) {
-            left: 65%;
-            width: 20px;
-            height: 20px;
-            animation-delay: 0s;
-        }
-
-        .background-shapes li:nth-child(6) {
-            left: 75%;
-            width: 110px;
-            height: 110px;
-            animation-delay: 3s;
-        }
-
-        .background-shapes li:nth-child(7) {
-            left: 35%;
-            width: 150px;
-            height: 150px;
-            animation-delay: 7s;
-        }
-
-        .background-shapes li:nth-child(8) {
-            left: 50%;
-            width: 25px;
-            height: 25px;
-            animation-delay: 15s;
-            animation-duration: 45s;
-        }
-
-        .background-shapes li:nth-child(9) {
-            left: 20%;
-            width: 15px;
-            height: 15px;
-            animation-delay: 2s;
-            animation-duration: 35s;
-        }
-
-        .background-shapes li:nth-child(10) {
-            left: 85%;
-            width: 150px;
-            height: 150px;
-            animation-delay: 0s;
-            animation-duration: 11s;
-        }
-
-        @keyframes floatUp {
-            0% {
-                transform: translateY(0) rotate(0deg);
-                opacity: 1;
-                border-radius: 0;
-            }
-
-            100% {
-                transform: translateY(-1200px) rotate(720deg);
-                opacity: 0;
-                border-radius: 50%;
-            }
-        }
-
-         
         .register-container {
             position: relative;
             z-index: 1;
@@ -208,7 +177,6 @@
             width: 100%;
             max-width: 480px;
             background: rgba(10, 25, 47, 0.85);
-             
             backdrop-filter: blur(12px);
             border: 1px solid var(--border-color);
             border-radius: 20px;
@@ -220,7 +188,6 @@
             opacity: 0;
             transform: translateY(30px);
             animation: fadeUp 0.8s ease-out forwards;
-            animation-delay: 0.5s;
         }
 
         @keyframes fadeUp {
@@ -235,17 +202,9 @@
             margin-bottom: 20px;
         }
 
-        .logo-text {
-            font-size: 28px;
-            font-weight: 800;
-            color: var(--text-white);
-            text-decoration: none;
-            letter-spacing: 1px;
-            transition: 0.3s;
-        }
-
-        .logo-text span {
-            color: var(--aqua);
+        .logo img {
+            width: 138px;
+            max-width: 100%;
         }
 
         .header-text {
@@ -264,7 +223,6 @@
             font-size: 14px;
         }
 
-         
         .role-selector {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -306,7 +264,6 @@
             color: var(--aqua);
         }
 
-         
         .input-group {
             margin-bottom: 15px;
             position: relative;
@@ -380,7 +337,6 @@
             height: 18px;
         }
 
-         
         .btn-submit {
             width: 100%;
             padding: 14px;
@@ -408,7 +364,6 @@
             transform: scale(0.95);
         }
 
-         
         .social-login {
             text-align: center;
             margin-top: 25px;
@@ -484,12 +439,12 @@
             text-shadow: var(--aqua-glow);
         }
 
-        .logo img {
-            width: 138px;
-        }
 
-         
         @media(max-width: 600px) {
+            body {
+                padding: 15px;
+            }
+
             .back-home-btn {
                 position: absolute;
                 top: 15px;
@@ -506,41 +461,48 @@
 
             .register-container {
                 padding: 30px 20px;
-                margin-top: 80px;
+                margin-top: 70px;
+
+                margin-bottom: 20px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            .social-login p::before,
+            .social-login p::after {
+                width: 20%;
             }
         }
     </style>
 </head>
 
 <body>
-       
-    <ul class="background-shapes">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-    </ul>
 
-       
+    <div class="preloader-overlay" id="preloader">
+        <div class="preloader-content">
+            <div class="aqua-ring"></div>
+            <div class="preloader-icon">
+                <i class="fa-solid fa-chart-line"></i>
+            </div>
+            <div class="preloader-text">TECH WEALTH</div>
+            <div class="preloader-subtext">Optimizing Assets...</div>
+        </div>
+    </div>
+
     <a href="index.html" class="back-home-btn">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
             <line x1="19" y1="12" x2="5" y2="12"></line>
             <polyline points="12 19 5 12 12 5"></polyline>
         </svg>
-        Back to Home
+        Back to home
     </a>
 
-       
-    <div class="register-container">
 
+    <div class="register-container">
         <div class="logo">
-            <a href="index.html"><img src="./asset/Logo blue.webp" alt=""></a>
+            <a href="index.html"><img src="./asset/aqualogo.webp" alt="Stackly Wealth Logo"></a>
         </div>
 
         <div class="header-text">
@@ -548,7 +510,6 @@
             <p>Join our premium wealth management platform</p>
         </div>
 
-           
         <div class="role-selector">
             <div class="role-card active" id="reg-investor">
                 <i class="fa-solid fa-chart-line"></i>
@@ -560,7 +521,6 @@
             </div>
         </div>
 
-           
         <form id="registerForm">
             <div class="input-group" id="nameGroup">
                 <label>Full Name</label>
@@ -626,14 +586,33 @@
         </div>
     </div>
 
-       
     <script>
+
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+
+            const preloader = document.getElementById("preloader");
+            const mainContent = document.getElementById("mainContent");
+
+
+            window.addEventListener("load", () => {
+                setTimeout(() => {
+                    preloader.style.opacity = "0";
+                    preloader.style.visibility = "hidden";
+
+                    mainContent.classList.remove("app-hidden");
+                    mainContent.classList.add("app-visible");
+                }, 1500);
+            });
+
+        });
         let currentRole = 'investor';
         const investorCard = document.getElementById('reg-investor');
         const advisorCard = document.getElementById('reg-advisor');
         const submitBtn = document.getElementById('submitBtn');
 
-        // Role Selection
+
         investorCard.addEventListener('click', () => {
             currentRole = 'investor';
             investorCard.classList.add('active');
@@ -648,7 +627,7 @@
             submitBtn.innerText = 'Create Advisor Account';
         });
 
-        // Eye Icons for Password Toggle
+
         const eyeOpenSVG = `<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle>`;
         const eyeClosedSVG = `<path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24M1 1l22 22"></path>`;
 
@@ -669,7 +648,7 @@
         setupPasswordToggle('toggleEye1', 'regPwd', 'eyeIcon1');
         setupPasswordToggle('toggleEye2', 'confirmPwd', 'eyeIcon2');
 
-        // Form Validation on Submit
+
         document.getElementById('registerForm').addEventListener('submit', (e) => {
             e.preventDefault();
 
@@ -691,7 +670,7 @@
             let isValid = true;
             const nameRegex = /^[A-Za-z\s]+$/;
 
-            // 1. Name Validation
+
             if (nameInput.value.trim() === '') {
                 nameGroup.classList.add('input-error');
                 nameError.innerText = 'Full Name is required';
@@ -709,7 +688,7 @@
                 isValid = false;
             }
 
-            // 2. Email Validation
+
             if (emailInput.value.trim() === '') {
                 emailGroup.classList.add('input-error');
                 emailError.innerText = 'Email is required';
@@ -717,7 +696,7 @@
                 isValid = false;
             }
 
-            // 3. Password Validation
+
             if (pwdInput.value === '') {
                 pwdGroup.classList.add('input-error');
                 pwdError.innerText = 'Password is required';
@@ -730,7 +709,7 @@
                 isValid = false;
             }
 
-            // 4. Confirm Password Validation
+
             if (cpwdInput.value === '') {
                 cpwdGroup.classList.add('input-error');
                 cpwdError.innerText = 'Please confirm your password';
@@ -743,17 +722,17 @@
                 isValid = false;
             }
 
-            // 5. Final Submit Action
+
             if (isValid) {
                 submitBtn.innerText = 'Creating Account...';
                 submitBtn.disabled = true;
                 setTimeout(() => {
-                    window.location.href = 'login.html'; // Successful registration redirects to login
+                    window.location.href = 'login.html';
                 }, 1000);
             }
         });
 
-        // Clear Errors on Input
+
         const clearError = (inputId, groupId, errorId) => {
             document.getElementById(inputId).addEventListener('input', function () {
                 document.getElementById(groupId).classList.remove('input-error');

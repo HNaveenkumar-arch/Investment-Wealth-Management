@@ -1,21 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
-    
-    // 1. Preloader Logic
+
+
     const preloader = document.getElementById("preloader");
     const mainContent = document.getElementById("mainContent");
 
-    // Removes preloader after 1.5 seconds
+
     window.addEventListener("load", () => {
         setTimeout(() => {
             preloader.style.opacity = "0";
             preloader.style.visibility = "hidden";
-            
+
             mainContent.classList.remove("app-hidden");
             mainContent.classList.add("app-visible");
-        }, 1500); 
+        }, 1500);
     });
 
-    // 2. Navbar Scrolling Animation
+
     const navbar = document.getElementById("navbar");
 
     window.addEventListener("scroll", () => {
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // 3. Mobile Hamburger Menu Logic
+
     const burger = document.getElementById("burgerMenu");
     const menuWrapper = document.getElementById("menuWrapper");
     const body = document.body;
@@ -38,10 +38,10 @@ document.addEventListener("DOMContentLoaded", () => {
         body.classList.toggle("no-scroll"); // Prevents background scrolling when menu is open
     });
 
-    // Close mobile menu when a nav link is clicked
+
     navItems.forEach(item => {
         item.addEventListener("click", () => {
-            if(menuWrapper.classList.contains("active-menu")){
+            if (menuWrapper.classList.contains("active-menu")) {
                 menuWrapper.classList.remove("active-menu");
                 burger.classList.remove("toggle");
                 body.classList.remove("no-scroll");

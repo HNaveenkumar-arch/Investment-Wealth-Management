@@ -5,6 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="Stackly Wealth - The investment asset or page you are looking for is missing.">
+    <meta property="og:title" content="Your Website Title Here">
+    <meta property="og:description" content="Join our premium online learning platform and upgrade your skills today.">
+    <meta property="og:image" content="https://yourwebsite.com/asset/preview-image.jpg">
+    <meta property="og:url" content="https://yourwebsite.com">
+    <meta property="og:type" content="website">
+    <meta name="description"
+        content="Join our premium online learning platform. Access interactive courses, live community zones, and expert tutors to upgrade your skills today.">
+    <link rel="icon" type="image/png" href="./asset/logo_Favicon.webp">
 
     <title>404 - Asset Not Found | Stackly Wealth</title>
 
@@ -15,7 +23,7 @@
 
     <style>
         :root {
-             
+
             --navy-dark: #051024;
             --navy-light: #0a192f;
             --navy-deep: #020c1b;
@@ -44,7 +52,7 @@
             perspective: 1500px;
         }
 
-         
+
         .error-bg-glow {
             position: absolute;
             width: 150vw;
@@ -72,7 +80,7 @@
             }
         }
 
-         
+
         .scrolling-grid {
             position: absolute;
             top: 10%;
@@ -101,7 +109,7 @@
             }
         }
 
-         
+
         .error-container {
             position: relative;
             z-index: 10;
@@ -110,7 +118,7 @@
             width: 90%;
             max-width: 600px;
 
-             
+
             background: linear-gradient(rgba(5, 16, 36, 0.85), rgba(10, 25, 47, 0.95)),
                 url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&q=80') center/cover no-repeat;
 
@@ -123,7 +131,7 @@
             overflow: hidden;
         }
 
-         
+
         .status-badge {
             background: rgba(0, 229, 255, 0.15);
             border: 1px solid rgba(0, 229, 255, 0.3);
@@ -163,7 +171,7 @@
             }
         }
 
-         
+
         .error-code-wrapper {
             position: relative;
             display: inline-block;
@@ -180,7 +188,7 @@
             animation: floatingText 6s ease-in-out infinite;
         }
 
-         
+
         .flying-icon {
             position: absolute;
             top: -20px;
@@ -235,7 +243,7 @@
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
         }
 
-         
+
         .error-actions {
             display: flex;
             justify-content: center;
@@ -302,7 +310,7 @@
             transition: transform 0.3s ease;
         }
 
-         
+
         @media (max-width: 768px) {
             .error-code {
                 font-size: 6rem;
@@ -392,7 +400,7 @@
         const container = document.getElementById('errorContainer');
         const glow = document.getElementById('aquaGlow');
 
-        // 3D Parallax Effect on Mouse Move
+
         document.addEventListener('mousemove', (e) => {
             if (window.innerWidth > 768) {
                 const halfW = window.innerWidth / 2;
@@ -406,7 +414,7 @@
             }
         });
 
-        // Reset on Mouse Leave
+
         document.addEventListener('mouseleave', () => {
             if (window.innerWidth > 768) {
                 container.style.transform = `rotateY(0deg) rotateX(0deg) translateY(0)`;
